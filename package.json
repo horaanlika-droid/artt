@@ -1,0 +1,23 @@
+{
+  "name": "cocktail-embassy",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Cocktail Embassy — Telegram Mini App, бот и сайт: барное стекло ручной выдувки из Дубая, каталог, корзина, инвойс на компанию, чат поддержки и админ-панель в боте. Двуязычная витрина (RU/EN).",
+  "type": "module",
+  "engines": {
+    "node": ">=20"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "web": "MODE=web node src/index.js",
+    "bot": "MODE=bot node src/index.js",
+    "catalog": "python3 scripts/build_catalog.py",
+    "photos": "python3 scripts/extract_photos.py",
+    "restore": "node scripts/restore_catalog.mjs"
+  },
+  "dependencies": {
+    "express": "^4.19.2",
+    "grammy": "^1.30.0"
+  }
+}

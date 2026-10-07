@@ -1,0 +1,3007 @@
+{
+ "version": 1,
+ "brand": {
+  "name": "Cocktail Embassy",
+  "legalName": "Cocktail Embassy FZ-LLC",
+  "tagline": {
+   "ru": "Хрустальное стекло ручной выдувки для баров и ресторанов",
+   "en": "Hand-blown crystal glassware for bars & restaurants"
+  },
+  "about": {
+   "ru": "Cocktail Embassy — поставщик барного и ресторанного стекла из Дубая. Мы работаем с ручной выдувкой и тонким японским хрусталём: каждая коллекция отбирается вживую, чтобы держать край, баланс и оптику на уровне, которого ждут бармены. Отгружаем по ОАЭ и по всему миру.",
+   "en": "Cocktail Embassy is a Dubai-based supplier of bar and restaurant glassware. We work with hand-blown and thin Japanese crystal: every collection is selected in person so the rim, the balance and the optics stay where bartenders need them. We ship across the UAE and worldwide."
+  },
+  "instagram": "cocktail_embassy_dxb",
+  "telegram": "",
+  "whatsapp": "+971562388262",
+  "phone": "+971 56 238 8262",
+  "email": "sales@cocktailembassy.ae",
+  "city": "Dubai",
+  "country": "UAE",
+  "address": "Al Quoz Industrial Area 3, Dubai, UAE",
+  "currency": "AED",
+  "usdRate": 3.6725,
+  "managers": [
+   {
+    "name": "Sales desk",
+    "region": "Dubai & Northern Emirates · Дубай и северные эмираты",
+    "phone": "+971 56 238 8262",
+    "telegram": "",
+    "whatsapp": "+971562388262"
+   }
+  ]
+ },
+ "delivery": {
+  "freeCities": [
+   "Dubai"
+  ],
+  "freeFromAed": 1000,
+  "costAed": 50,
+  "note": {
+   "ru": "Отгружаем со склада в Дубае (Al Quoz) в течение 1–2 рабочих дней после оплаты. По Дубаю доставка бесплатная, по остальным эмиратам — 50 AED, бесплатно от 1000 AED. Экспорт по всему миру рассчитываем индивидуально (DHL / FedEx, DAP или CIF).",
+   "en": "We ship from our Dubai warehouse (Al Quoz) within 1–2 working days after payment. Delivery inside Dubai is free, to the other Emirates it is AED 50 — free over AED 1000. Worldwide export is quoted individually (DHL / FedEx, DAP or CIF)."
+  }
+ },
+ "categories": [
+  {
+   "id": "retro-asia",
+   "title": {
+    "ru": "Retro Asia",
+    "en": "Retro Asia"
+   },
+   "subtitle": {
+    "ru": "Азиатский рельеф, с гравировкой и без",
+    "en": "Asian relief, engraved and plain"
+   },
+   "emoji": "⛩️"
+  },
+  {
+   "id": "bullet",
+   "title": {
+    "ru": "Bullet",
+    "en": "Bullet"
+   },
+   "subtitle": {
+    "ru": "Плотное стекло, крупная форма",
+    "en": "Thick-walled, generous silhouette"
+   },
+   "emoji": "🎯"
+  },
+  {
+   "id": "flowers",
+   "title": {
+    "ru": "Flowers",
+    "en": "Flowers"
+   },
+   "subtitle": {
+    "ru": "Цветочный рельеф",
+    "en": "Floral relief"
+   },
+   "emoji": "🌸"
+  },
+  {
+   "id": "levitating",
+   "title": {
+    "ru": "Levitating",
+    "en": "Levitating"
+   },
+   "subtitle": {
+    "ru": "Тонкая ножка, парящая чаша",
+    "en": "Fine stem, floating bowl"
+   },
+   "emoji": "✨"
+  },
+  {
+   "id": "shorties",
+   "title": {
+    "ru": "Shorties",
+    "en": "Shorties"
+   },
+   "subtitle": {
+    "ru": "Малые коктейльные формы",
+    "en": "Compact cocktail shapes"
+   },
+   "emoji": "🫗"
+  },
+  {
+   "id": "coupethini",
+   "title": {
+    "ru": "Coupethini",
+    "en": "Coupethini"
+   },
+   "subtitle": {
+    "ru": "Классическое купе",
+    "en": "The classic coupe"
+   },
+   "emoji": "🍸"
+  },
+  {
+   "id": "replicate",
+   "title": {
+    "ru": "Replicate",
+    "en": "Replicate"
+   },
+   "subtitle": {
+    "ru": "Боросиликатное стекло",
+    "en": "Borosilicate glass"
+   },
+   "emoji": "🧪"
+  },
+  {
+   "id": "teapot",
+   "title": {
+    "ru": "Teapot",
+    "en": "Teapot"
+   },
+   "subtitle": {
+    "ru": "Чайная подача",
+    "en": "Tea service"
+   },
+   "emoji": "🫖"
+  },
+  {
+   "id": "two-sips",
+   "title": {
+    "ru": "Two Sips",
+    "en": "Two Sips"
+   },
+   "subtitle": {
+    "ru": "Скоро в наличии",
+    "en": "Coming soon"
+   },
+   "emoji": "🥂"
+  }
+ ],
+ "products": [
+  {
+   "id": "AG0015",
+   "article": "AG0015",
+   "category": "retro-asia",
+   "glass": "cocktail",
+   "glassLabel": {
+    "ru": "Коктейльный бокал",
+    "en": "Cocktail glass"
+   },
+   "name": {
+    "ru": "Retro Asia коктейльный бокал",
+    "en": "Retro Asia Cocktail Glass"
+   },
+   "description": {
+    "ru": "Коктейльный бокал коллекции Retro Asia с азиатским рельефом: 140 мл, ручная выдувка, хрустальное стекло без свинца. Держит тонкий аромат в купе-коктейлях и смотрится в кадре.",
+    "en": "Retro Asia cocktail glass with an Asian relief pattern: 140 ml, hand-blown, lead-free crystal. Keeps delicate aromas in coupe-style cocktails and photographs beautifully."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 140,
+   "volumeLabel": {
+    "ru": "140 мл",
+    "en": "140 ml"
+   },
+   "heightMm": 115,
+   "diameterMm": 73,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0015.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Коктейльный бокал",
+      "en": "Cocktail glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "140 мл",
+      "en": "140 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "115 мм",
+      "en": "115 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "73 мм",
+      "en": "73 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": true,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 0
+  },
+  {
+   "id": "AG0016",
+   "article": "AG0016",
+   "category": "retro-asia",
+   "glass": "rocks",
+   "glassLabel": {
+    "ru": "Рокс",
+    "en": "Rocks glass"
+   },
+   "name": {
+    "ru": "Retro Asia рокс",
+    "en": "Retro Asia Rocks Glass"
+   },
+   "description": {
+    "ru": "Рокс 270 мл из серии Retro Asia без гравировки: плотное дно, рельеф по корпусу, уверенно держит большой кубик льда и олд фешн.",
+    "en": "The 270 ml Retro Asia rocks glass without engraving: heavy base, relief body, a confident home for a large ice cube and an Old Fashioned."
+   },
+   "price": 25,
+   "priceUsd": 6.8,
+   "currency": "AED",
+   "volumeMl": 270,
+   "volumeLabel": {
+    "ru": "270 мл",
+    "en": "270 ml"
+   },
+   "heightMm": 80,
+   "diameterMm": 73,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0016.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Рокс",
+      "en": "Rocks glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "270 мл",
+      "en": "270 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "80 мм",
+      "en": "80 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "73 мм",
+      "en": "73 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 1
+  },
+  {
+   "id": "AG0017",
+   "article": "AG0017",
+   "category": "retro-asia",
+   "glass": "highball",
+   "glassLabel": {
+    "ru": "Хайбол",
+    "en": "Highball glass"
+   },
+   "name": {
+    "ru": "Retro Asia хайбол",
+    "en": "Retro Asia Highball Glass"
+   },
+   "description": {
+    "ru": "Хайбол 310 мл для лонг-дринков и хайбол-сетов: тонкий край, ровный рельеф, выдерживает интенсивный барный оборот и посудомоечную машину.",
+    "en": "310 ml highball for long drinks and highball sets: fine rim, even relief, built for a busy bar and a dishwasher."
+   },
+   "price": 25,
+   "priceUsd": 6.8,
+   "currency": "AED",
+   "volumeMl": 310,
+   "volumeLabel": {
+    "ru": "310 мл",
+    "en": "310 ml"
+   },
+   "heightMm": 110,
+   "diameterMm": 70,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0017.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Хайбол",
+      "en": "Highball glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "310 мл",
+      "en": "310 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "110 мм",
+      "en": "110 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "70 мм",
+      "en": "70 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 2
+  },
+  {
+   "id": "AG0018",
+   "article": "AG0018",
+   "category": "retro-asia",
+   "glass": "shot",
+   "glassLabel": {
+    "ru": "Шот",
+    "en": "Shot glass"
+   },
+   "name": {
+    "ru": "Retro Asia шот",
+    "en": "Retro Asia Shot Glass"
+   },
+   "description": {
+    "ru": "Шот 60 мл из той же серии — для азиатских ликёров, саке и дегустационных подач. Ручная выдувка, идеальная геометрия края.",
+    "en": "60 ml shot from the same series — for Asian liqueurs, sake and tasting flights. Hand-blown with a flawless rim."
+   },
+   "price": 10,
+   "priceUsd": 2.8,
+   "currency": "AED",
+   "volumeMl": 60,
+   "volumeLabel": {
+    "ru": "60 мл",
+    "en": "60 ml"
+   },
+   "heightMm": 73,
+   "diameterMm": 30,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0018.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Шот",
+      "en": "Shot glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "60 мл",
+      "en": "60 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "73 мм",
+      "en": "73 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "30 мм",
+      "en": "30 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 3
+  },
+  {
+   "id": "AG0011",
+   "article": "AG0011",
+   "category": "retro-asia",
+   "glass": "cocktail",
+   "glassLabel": {
+    "ru": "Коктейльный бокал",
+    "en": "Cocktail glass"
+   },
+   "name": {
+    "ru": "Retro Asia коктейльный бокал с гравировкой",
+    "en": "Retro Asia Cocktail Glass, engraved"
+   },
+   "description": {
+    "ru": "Версия с гравировкой: тот же коктейльный бокал 140 мл, но рельеф дополнительно декорирован вручную — акцент на премиальной подаче и банкетной сервировке.",
+    "en": "The engraved version: same 140 ml cocktail glass, with the relief hand-decorated — made for premium service and banquet settings."
+   },
+   "price": 35,
+   "priceUsd": 10.9,
+   "currency": "AED",
+   "volumeMl": 140,
+   "volumeLabel": {
+    "ru": "140 мл",
+    "en": "140 ml"
+   },
+   "heightMm": 115,
+   "diameterMm": 73,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": true,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0011.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Коктейльный бокал",
+      "en": "Cocktail glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "140 мл",
+      "en": "140 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "115 мм",
+      "en": "115 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "73 мм",
+      "en": "73 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 4
+  },
+  {
+   "id": "AG0012",
+   "article": "AG0012",
+   "category": "retro-asia",
+   "glass": "rocks",
+   "glassLabel": {
+    "ru": "Рокс",
+    "en": "Rocks glass"
+   },
+   "name": {
+    "ru": "Retro Asia рокс с гравировкой",
+    "en": "Retro Asia Rocks Glass, engraved"
+   },
+   "description": {
+    "ru": "Рокс 270 мл с гравировкой: декоративный рельеф ловит свет и делает крепкие коктейли визуально дороже без изменения вкуса.",
+    "en": "270 ml engraved rocks glass: the decorative relief catches the light and makes spirit-forward cocktails look richer, never changing the drink."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 270,
+   "volumeLabel": {
+    "ru": "270 мл",
+    "en": "270 ml"
+   },
+   "heightMm": 80,
+   "diameterMm": 73,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": true,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0012.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Рокс",
+      "en": "Rocks glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "270 мл",
+      "en": "270 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "80 мм",
+      "en": "80 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "73 мм",
+      "en": "73 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 5
+  },
+  {
+   "id": "AG0013",
+   "article": "AG0013",
+   "category": "retro-asia",
+   "glass": "highball",
+   "glassLabel": {
+    "ru": "Хайбол",
+    "en": "Highball glass"
+   },
+   "name": {
+    "ru": "Retro Asia хайбол с гравировкой",
+    "en": "Retro Asia Highball Glass, engraved"
+   },
+   "description": {
+    "ru": "Хайбол 310 мл с гравировкой — для авторских лонгов, где важна и геометрия бокала, и декоративная фактура стекла.",
+    "en": "310 ml engraved highball — for signature long drinks where both the geometry and the decorative texture matter."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 310,
+   "volumeLabel": {
+    "ru": "310 мл",
+    "en": "310 ml"
+   },
+   "heightMm": 110,
+   "diameterMm": 70,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": true,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0013.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Хайбол",
+      "en": "Highball glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "310 мл",
+      "en": "310 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "110 мм",
+      "en": "110 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "70 мм",
+      "en": "70 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 6
+  },
+  {
+   "id": "AG0014",
+   "article": "AG0014",
+   "category": "retro-asia",
+   "glass": "shot",
+   "glassLabel": {
+    "ru": "Шот",
+    "en": "Shot glass"
+   },
+   "name": {
+    "ru": "Retro Asia шот с гравировкой",
+    "en": "Retro Asia Shot Glass, engraved"
+   },
+   "description": {
+    "ru": "Шот 60 мл с гравировкой: комплектуется с остальной серией и работает как отдельный акцент в дегустационном сете.",
+    "en": "60 ml engraved shot: pairs with the rest of the series and works as a stand-alone accent in a tasting set."
+   },
+   "price": 15,
+   "priceUsd": 4.1,
+   "currency": "AED",
+   "volumeMl": 60,
+   "volumeLabel": {
+    "ru": "60 мл",
+    "en": "60 ml"
+   },
+   "heightMm": 73,
+   "diameterMm": 30,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": true,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0014.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Шот",
+      "en": "Shot glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "60 мл",
+      "en": "60 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "73 мм",
+      "en": "73 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "30 мм",
+      "en": "30 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Retro Asia",
+      "en": "Retro Asia"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 7
+  },
+  {
+   "id": "AG0008",
+   "article": "AG0008",
+   "category": "bullet",
+   "glass": "chalet",
+   "glassLabel": {
+    "ru": "Шале",
+    "en": "Chalet glass"
+   },
+   "name": {
+    "ru": "Bullet шале",
+    "en": "Bullet Chalet Glass"
+   },
+   "description": {
+    "ru": "Шале 210 мл из коллекции Bullet: массивное стекло, широкая чаша, тяжёлое дно — для крепких коктейлей и подачи со льдом.",
+    "en": "The 210 ml chalet glass from the Bullet collection: substantial glass, wide bowl, heavy base — built for spirit-forward serves."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 210,
+   "volumeLabel": {
+    "ru": "210 мл",
+    "en": "210 ml"
+   },
+   "heightMm": 145,
+   "diameterMm": 97,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0008.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Шале",
+      "en": "Chalet glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "210 мл",
+      "en": "210 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "145 мм",
+      "en": "145 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "97 мм",
+      "en": "97 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Bullet",
+      "en": "Bullet"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": true,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 8
+  },
+  {
+   "id": "AG0010",
+   "article": "AG0010",
+   "category": "bullet",
+   "glass": "rocks",
+   "glassLabel": {
+    "ru": "Рокс",
+    "en": "Rocks glass"
+   },
+   "name": {
+    "ru": "Bullet рокс",
+    "en": "Bullet Rocks Glass"
+   },
+   "description": {
+    "ru": "Большой рокс 390 мл: подходит и для крепкого алкоголя со льдом, и для подачи десертов. Стекло ручной выдувки, устойчивое к сколам.",
+    "en": "A generous 390 ml rocks glass: as good for spirits on ice as for desserts. Hand-blown crystal that resists chipping."
+   },
+   "price": 25,
+   "priceUsd": 6.8,
+   "currency": "AED",
+   "volumeMl": 390,
+   "volumeLabel": {
+    "ru": "390 мл",
+    "en": "390 ml"
+   },
+   "heightMm": 75,
+   "diameterMm": 85,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0010.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Рокс",
+      "en": "Rocks glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "390 мл",
+      "en": "390 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "75 мм",
+      "en": "75 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "85 мм",
+      "en": "85 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Bullet",
+      "en": "Bullet"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 9
+  },
+  {
+   "id": "AG0009",
+   "article": "AG0009",
+   "category": "bullet",
+   "glass": "highball",
+   "glassLabel": {
+    "ru": "Хайбол",
+    "en": "Highball glass"
+   },
+   "name": {
+    "ru": "Bullet хайбол",
+    "en": "Bullet Highball Glass"
+   },
+   "description": {
+    "ru": "Хайбол 410 мл: высокий силуэт, плотный край, идеален для тоников и лимонадов на веранде и в лаунж-зоне.",
+    "en": "410 ml highball: tall silhouette, sturdy rim, made for tonics and lemonades on the terrace or in the lounge."
+   },
+   "price": 25,
+   "priceUsd": 6.8,
+   "currency": "AED",
+   "volumeMl": 410,
+   "volumeLabel": {
+    "ru": "410 мл",
+    "en": "410 ml"
+   },
+   "heightMm": 133,
+   "diameterMm": 74,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0009.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Хайбол",
+      "en": "Highball glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "410 мл",
+      "en": "410 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "133 мм",
+      "en": "133 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "74 мм",
+      "en": "74 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Bullet",
+      "en": "Bullet"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 10
+  },
+  {
+   "id": "AG0002",
+   "article": "AG0002",
+   "category": "flowers",
+   "glass": "cocktail",
+   "glassLabel": {
+    "ru": "Коктейльный бокал",
+    "en": "Cocktail glass"
+   },
+   "name": {
+    "ru": "Flowers коктейльный бокал",
+    "en": "Flowers Cocktail Glass"
+   },
+   "description": {
+    "ru": "Высокий коктейльный бокал 150 мл с цветочным рельефом: удлинённая ножка, тонкий край, рассчитан на подачу в мартини-гласс стиле.",
+    "en": "A tall 150 ml cocktail glass with floral relief: elongated stem, fine rim, served in the martini-glass tradition."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 150,
+   "volumeLabel": {
+    "ru": "150 мл",
+    "en": "150 ml"
+   },
+   "heightMm": 190,
+   "diameterMm": 85,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0002.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Коктейльный бокал",
+      "en": "Cocktail glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "150 мл",
+      "en": "150 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "190 мм",
+      "en": "190 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "85 мм",
+      "en": "85 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Flowers",
+      "en": "Flowers"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": true,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 11
+  },
+  {
+   "id": "AG0003",
+   "article": "AG0003",
+   "category": "flowers",
+   "glass": "rocks",
+   "glassLabel": {
+    "ru": "Рокс",
+    "en": "Rocks glass"
+   },
+   "name": {
+    "ru": "Flowers рокс",
+    "en": "Flowers Rocks Glass"
+   },
+   "description": {
+    "ru": "Рокс 330 мл с цветочным рельефом — универсальная позиция для бара: коктейли, виски, вода, десертные подачи.",
+    "en": "330 ml rocks glass with floral relief — the all-rounder: cocktails, whisky, water, desserts."
+   },
+   "price": 25,
+   "priceUsd": 6.8,
+   "currency": "AED",
+   "volumeMl": 330,
+   "volumeLabel": {
+    "ru": "330 мл",
+    "en": "330 ml"
+   },
+   "heightMm": 85,
+   "diameterMm": 95,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0003.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Рокс",
+      "en": "Rocks glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "330 мл",
+      "en": "330 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "85 мм",
+      "en": "85 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "95 мм",
+      "en": "95 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Flowers",
+      "en": "Flowers"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 12
+  },
+  {
+   "id": "AG0001",
+   "article": "AG0001",
+   "category": "flowers",
+   "glass": "highball",
+   "glassLabel": {
+    "ru": "Хайбол",
+    "en": "Highball glass"
+   },
+   "name": {
+    "ru": "Flowers хайбол",
+    "en": "Flowers Highball Glass"
+   },
+   "description": {
+    "ru": "Хайбол 370 мл с цветочным рельефом: спокойная, чуть расширенная кверху форма — стабильная пена и удобный хват.",
+    "en": "370 ml highball with floral relief: calm, slightly flared shape — stable foam and an easy grip."
+   },
+   "price": 25,
+   "priceUsd": 6.8,
+   "currency": "AED",
+   "volumeMl": 370,
+   "volumeLabel": {
+    "ru": "370 мл",
+    "en": "370 ml"
+   },
+   "heightMm": 110,
+   "diameterMm": 85,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0001.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Хайбол",
+      "en": "Highball glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "370 мл",
+      "en": "370 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "110 мм",
+      "en": "110 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "85 мм",
+      "en": "85 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Flowers",
+      "en": "Flowers"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 13
+  },
+  {
+   "id": "AG0006",
+   "article": "AG0006",
+   "category": "coupethini",
+   "glass": "coupe",
+   "glassLabel": {
+    "ru": "Купе",
+    "en": "Coupe glass"
+   },
+   "name": {
+    "ru": "Coupethini",
+    "en": "Coupethini"
+   },
+   "description": {
+    "ru": "Coupethini 145 мл — купе с удлинённой ножкой: классика для сауэров, дайкири и мартини. Устойчивое основание, аккуратная закруглённая чаша.",
+    "en": "Coupethini 145 ml — a long-stemmed coupe: the classic for sours, daiquiris and martinis. Stable foot, neatly rounded bowl."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 145,
+   "volumeLabel": {
+    "ru": "145 мл",
+    "en": "145 ml"
+   },
+   "heightMm": 170,
+   "diameterMm": 80,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0006.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Купе",
+      "en": "Coupe glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "145 мл",
+      "en": "145 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "170 мм",
+      "en": "170 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "80 мм",
+      "en": "80 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Coupethini",
+      "en": "Coupethini"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": true,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 14
+  },
+  {
+   "id": "AG0004",
+   "article": "AG0004",
+   "category": "replicate",
+   "glass": "rocks",
+   "glassLabel": {
+    "ru": "Рокс",
+    "en": "Rocks glass"
+   },
+   "name": {
+    "ru": "Replicate рокс",
+    "en": "Replicate Rocks Glass"
+   },
+   "description": {
+    "ru": "Рокс 330 мл из боросиликатного стекла: термостойкий, лёгкий, с чистой оптикой. Рабочая лошадка для кофе-коктейлей и горячих подач.",
+    "en": "330 ml borosilicate rocks glass: heat-resistant, lightweight, perfectly clear. The workhorse for coffee cocktails and hot serves."
+   },
+   "price": 28,
+   "priceUsd": 8,
+   "currency": "AED",
+   "volumeMl": 330,
+   "volumeLabel": {
+    "ru": "330 мл",
+    "en": "330 ml"
+   },
+   "heightMm": 80,
+   "diameterMm": 75,
+   "material": {
+    "ru": "Боросиликатное стекло",
+    "en": "Borosilicate glass"
+   },
+   "engraving": false,
+   "handBlown": false,
+   "pack": "pc",
+   "image": "assets/products/AG0004.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Рокс",
+      "en": "Rocks glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "330 мл",
+      "en": "330 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "80 мм",
+      "en": "80 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "75 мм",
+      "en": "75 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Боросиликатное стекло",
+      "en": "Borosilicate glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Replicate",
+      "en": "Replicate"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 15
+  },
+  {
+   "id": "AG0020",
+   "article": "AG0020",
+   "category": "levitating",
+   "glass": "pony",
+   "glassLabel": {
+    "ru": "Пони",
+    "en": "Pony glass"
+   },
+   "name": {
+    "ru": "Levitating Super Pony",
+    "en": "Levitating Super Pony"
+   },
+   "description": {
+    "ru": "Super Pony 140 мл: высокая ножка 208 мм и парящая чаша — визуальный центр стола и удобный формат для шотов-коктейлей.",
+    "en": "Super Pony 140 ml: a 208 mm stem and a floating bowl — the centrepiece of the table and a great format for cocktail shots."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 140,
+   "volumeLabel": {
+    "ru": "140 мл",
+    "en": "140 ml"
+   },
+   "heightMm": 208,
+   "diameterMm": 70,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0020.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Пони",
+      "en": "Pony glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "140 мл",
+      "en": "140 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "208 мм",
+      "en": "208 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "70 мм",
+      "en": "70 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Levitating",
+      "en": "Levitating"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": true,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 16
+  },
+  {
+   "id": "AG0021",
+   "article": "AG0021",
+   "category": "levitating",
+   "glass": "rocks",
+   "glassLabel": {
+    "ru": "Рокс",
+    "en": "Rocks glass"
+   },
+   "name": {
+    "ru": "Levitating рокс",
+    "en": "Levitating Rocks Glass"
+   },
+   "description": {
+    "ru": "Рокс 300 мл на тонкой ножке: эффект «парящего» бокала, который выигрышно смотрится на барной стойке и в сторис.",
+    "en": "A 300 ml rocks glass on a fine stem: the 'levitating' look that shines on the bar top and in stories."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 300,
+   "volumeLabel": {
+    "ru": "300 мл",
+    "en": "300 ml"
+   },
+   "heightMm": 100,
+   "diameterMm": 76,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0021.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Рокс",
+      "en": "Rocks glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "300 мл",
+      "en": "300 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "100 мм",
+      "en": "100 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "76 мм",
+      "en": "76 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Levitating",
+      "en": "Levitating"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": true,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 17
+  },
+  {
+   "id": "AG0022",
+   "article": "AG0022",
+   "category": "levitating",
+   "glass": "highball",
+   "glassLabel": {
+    "ru": "Хайбол",
+    "en": "Highball glass"
+   },
+   "name": {
+    "ru": "Levitating хайбол",
+    "en": "Levitating Highball Glass"
+   },
+   "description": {
+    "ru": "Высокий хайбол 390 мл на ножке: узкий корпус держит газ, ножка не греет напиток рукой.",
+    "en": "A tall 390 ml stemmed highball: the narrow body holds carbonation, the stem keeps your hand away from the drink."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 390,
+   "volumeLabel": {
+    "ru": "390 мл",
+    "en": "390 ml"
+   },
+   "heightMm": 180,
+   "diameterMm": 58,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0022.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Хайбол",
+      "en": "Highball glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "390 мл",
+      "en": "390 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "180 мм",
+      "en": "180 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "58 мм",
+      "en": "58 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Levitating",
+      "en": "Levitating"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": true,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 18
+  },
+  {
+   "id": "AG0023",
+   "article": "AG0023",
+   "category": "shorties",
+   "glass": "martini",
+   "glassLabel": {
+    "ru": "Мартини",
+    "en": "Martini glass"
+   },
+   "name": {
+    "ru": "Shorties Mini Martini",
+    "en": "Shorties Mini Martini"
+   },
+   "description": {
+    "ru": "Mini Martini 150 мл — компактная мартини-форма из серии Shorties: короткая ножка, широкая чаша, аккуратная подача на подносе.",
+    "en": "Mini Martini 150 ml — the compact martini shape from the Shorties series: short stem, wide bowl, easy on a tray."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 150,
+   "volumeLabel": {
+    "ru": "150 мл",
+    "en": "150 ml"
+   },
+   "heightMm": null,
+   "diameterMm": null,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0023.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Мартини",
+      "en": "Martini glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "150 мл",
+      "en": "150 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Shorties",
+      "en": "Shorties"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": true,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 19
+  },
+  {
+   "id": "AG0024",
+   "article": "AG0024",
+   "category": "shorties",
+   "glass": "coupe",
+   "glassLabel": {
+    "ru": "Купе",
+    "en": "Coupe glass"
+   },
+   "name": {
+    "ru": "Shorties Daisy Coupe",
+    "en": "Shorties Daisy Coupe"
+   },
+   "description": {
+    "ru": "Daisy Coupe 150 мл: округлая чаша с мягким переходом в ножку — для сауэров, десертных коктейлей и игристого.",
+    "en": "Daisy Coupe 150 ml: a rounded bowl flowing into the stem — for sours, dessert cocktails and sparkling wine."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 150,
+   "volumeLabel": {
+    "ru": "150 мл",
+    "en": "150 ml"
+   },
+   "heightMm": null,
+   "diameterMm": null,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0024.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Купе",
+      "en": "Coupe glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "150 мл",
+      "en": "150 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Shorties",
+      "en": "Shorties"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": true,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 20
+  },
+  {
+   "id": "AG0026",
+   "article": "AG0026",
+   "category": "shorties",
+   "glass": "cocktail",
+   "glassLabel": {
+    "ru": "Коктейльный бокал",
+    "en": "Cocktail glass"
+   },
+   "name": {
+    "ru": "Shorties Lil' Nora",
+    "en": "Shorties Lil' Nora"
+   },
+   "description": {
+    "ru": "Lil' Nora 160 мл — уменьшенная коктейльная форма для авторских мини-подач и премиальных дегустаций.",
+    "en": "Lil' Nora 160 ml — a scaled-down cocktail shape for signature mini serves and premium tastings."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 160,
+   "volumeLabel": {
+    "ru": "160 мл",
+    "en": "160 ml"
+   },
+   "heightMm": null,
+   "diameterMm": null,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0026.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Коктейльный бокал",
+      "en": "Cocktail glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "160 мл",
+      "en": "160 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Shorties",
+      "en": "Shorties"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 21
+  },
+  {
+   "id": "AG0025",
+   "article": "AG0025",
+   "category": "shorties",
+   "glass": "cocktail",
+   "glassLabel": {
+    "ru": "Коктейльный бокал",
+    "en": "Cocktail glass"
+   },
+   "name": {
+    "ru": "Shorties Modern Margo",
+    "en": "Shorties Modern Margo"
+   },
+   "description": {
+    "ru": "Modern Margo 200 мл: современная интерпретация маргариты — короткая ножка и широкая чаша под соль и лайм.",
+    "en": "Modern Margo 200 ml: a contemporary margarita silhouette — short stem, wide bowl ready for salt and lime."
+   },
+   "price": 30,
+   "priceUsd": 8.2,
+   "currency": "AED",
+   "volumeMl": 200,
+   "volumeLabel": {
+    "ru": "200 мл",
+    "en": "200 ml"
+   },
+   "heightMm": null,
+   "diameterMm": null,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0025.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Коктейльный бокал",
+      "en": "Cocktail glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "200 мл",
+      "en": "200 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Shorties",
+      "en": "Shorties"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": false,
+   "isHit": false,
+   "comingSoon": false,
+   "outOfStock": false,
+   "priceOnRequest": false,
+   "sort": 22
+  },
+  {
+   "id": "AG0027",
+   "article": "AG0027",
+   "category": "teapot",
+   "glass": "teapot",
+   "glassLabel": {
+    "ru": "Чайник",
+    "en": "Teapot"
+   },
+   "name": {
+    "ru": "Teapot с магнитной крышкой",
+    "en": "Teapot with magnetic lid"
+   },
+   "description": {
+    "ru": "Чайник 500 мл из хрустального стекла с деревянными элементами и магнитной системой крышки. Скоро в наличии — оставьте запрос, сообщим о поступлении первыми.",
+    "en": "A 500 ml crystal teapot with wooden details and a magnetic lid system. Coming soon — leave a request and we will tell you the moment it lands."
+   },
+   "price": 145,
+   "priceUsd": null,
+   "currency": "AED",
+   "volumeMl": 500,
+   "volumeLabel": {
+    "ru": "500 мл",
+    "en": "500 ml"
+   },
+   "heightMm": null,
+   "diameterMm": null,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0027.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Чайник",
+      "en": "Teapot"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "500 мл",
+      "en": "500 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "—",
+      "en": "—"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Teapot",
+      "en": "Teapot"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": true,
+   "isHit": false,
+   "comingSoon": true,
+   "outOfStock": true,
+   "priceOnRequest": false,
+   "sort": 23
+  },
+  {
+   "id": "AG0019",
+   "article": "AG0019",
+   "category": "two-sips",
+   "glass": "cocktail",
+   "glassLabel": {
+    "ru": "Коктейльный бокал",
+    "en": "Cocktail glass"
+   },
+   "name": {
+    "ru": "Two Sips коктейльный бокал",
+    "en": "Two Sips Cocktail Glass"
+   },
+   "description": {
+    "ru": "Two Sips 85 мл — бокал на два глотка для аперитивных сетов. Скоро в наличии: цену и дату поставки подтвердит менеджер.",
+    "en": "Two Sips 85 ml — a two-sip glass for aperitivo sets. Coming soon: the manager will confirm price and delivery date."
+   },
+   "price": null,
+   "priceUsd": null,
+   "currency": "AED",
+   "volumeMl": 85,
+   "volumeLabel": {
+    "ru": "85 мл",
+    "en": "85 ml"
+   },
+   "heightMm": 150,
+   "diameterMm": 90,
+   "material": {
+    "ru": "Хрусталь без свинца, ручная выдувка",
+    "en": "Lead-free crystal, hand-blown"
+   },
+   "engraving": false,
+   "handBlown": true,
+   "pack": "pc",
+   "image": "assets/products/AG0019.jpg",
+   "specs": [
+    {
+     "key": {
+      "ru": "Тип",
+      "en": "Type"
+     },
+     "value": {
+      "ru": "Коктейльный бокал",
+      "en": "Cocktail glass"
+     }
+    },
+    {
+     "key": {
+      "ru": "Объём",
+      "en": "Capacity"
+     },
+     "value": {
+      "ru": "85 мл",
+      "en": "85 ml"
+     }
+    },
+    {
+     "key": {
+      "ru": "Высота",
+      "en": "Height"
+     },
+     "value": {
+      "ru": "150 мм",
+      "en": "150 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Диаметр",
+      "en": "Diameter"
+     },
+     "value": {
+      "ru": "90 мм",
+      "en": "90 mm"
+     }
+    },
+    {
+     "key": {
+      "ru": "Материал",
+      "en": "Material"
+     },
+     "value": {
+      "ru": "Хрусталь без свинца, ручная выдувка",
+      "en": "Lead-free crystal, hand-blown"
+     }
+    },
+    {
+     "key": {
+      "ru": "Коллекция",
+      "en": "Collection"
+     },
+     "value": {
+      "ru": "Two Sips",
+      "en": "Two Sips"
+     }
+    },
+    {
+     "key": {
+      "ru": "Упаковка",
+      "en": "Packaging"
+     },
+     "value": {
+      "ru": "Штука, в коробке с защитой",
+      "en": "Sold per piece, boxed with protection"
+     }
+    }
+   ],
+   "isNew": true,
+   "isHit": false,
+   "comingSoon": true,
+   "outOfStock": true,
+   "priceOnRequest": true,
+   "sort": 24
+  }
+ ]
+}
