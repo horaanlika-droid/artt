@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-label="Cocktail Embassy">
+  <defs>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f2dda6"/>
+      <stop offset="0.55" stop-color="#d3ad63"/>
+      <stop offset="1" stop-color="#a8813a"/>
+    </linearGradient>
+  </defs>
+  <rect width="96" height="96" rx="22" fill="#0f0f12"/>
+  <circle cx="48" cy="48" r="41" fill="none" stroke="url(#gold)" stroke-width="1.2" opacity="0.6"/>
+  <g fill="none" stroke="url(#gold)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M25 32h46"/>
+    <path d="M25 32c0 12.4 10.3 22.5 23 22.5S71 44.4 71 32"/>
+    <path d="M48 54.5V75"/>
+    <path d="M36 79h24"/>
+    <path d="M34 82h28"/>
+  </g>
+  <path d="M27.5 34.5c4 8.6 10.5 13.4 20.5 13.4s16.5-4.8 20.5-13.4z" fill="url(#gold)" opacity="0.22"/>
+</svg>
