@@ -27,7 +27,7 @@ export default function catalogView(params = {}) {
   let query = params.query || '';
 
   const grid = h('.product-grid');
-  const countLabel = h('.tiny.muted', { style: { padding: '10px 20px 0' } });
+  const countLabel = h('.tiny.muted-ink', { style: { padding: '10px 20px 0' } });
   const prices = state.products.map((p) => p.price).filter((v) => Number.isFinite(v));
   const maxPrice = Math.max(...prices, 0);
 

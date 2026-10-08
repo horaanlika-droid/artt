@@ -44,7 +44,7 @@ export default function searchView() {
       return;
     }
     results.append(
-      h('.tiny.muted', { style: { padding: '14px 20px 8px' } }, `${t('catalog.found')}: ${list.length}`),
+      h('.tiny.muted-ink', { style: { padding: '14px 20px 8px' } }, `${t('catalog.found')}: ${list.length}`),
       h('.product-grid', ...list.map((p) => productCard(p))),
     );
   }

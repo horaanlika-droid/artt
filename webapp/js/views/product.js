@@ -55,7 +55,7 @@ export default function productView({ id }) {
 
   const qtyBox = h('div', { style: { display: 'flex', alignItems: 'center', gap: '12px', padding: '14px 20px 0' } });
   if (inStock && p.price !== null) {
-    const label = h('span.tiny.muted', t('cart.qty'));
+    const label = h('span.tiny.muted-ink', t('cart.qty'));
     qtyBox.append(label, h('.spacer'), qtyStepper(p.id, Math.max(1, inCart(p.id) || 1)));
   }
 

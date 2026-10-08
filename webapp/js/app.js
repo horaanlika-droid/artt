@@ -37,9 +37,9 @@ function splash(message, retry = false) {
   host.innerHTML = '';
   host.append(h('.screen',
     h('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', height: '80%', gap: '18px', padding: '0 32px', textAlign: 'center' } },
-      h('img', { src: 'assets/brand/logo.svg', style: { height: '42px', opacity: '0.85' } }),
+      h('img', { src: 'assets/brand/logo-dark.svg', style: { height: '42px' } }),
       retry ? null : h('.spinner'),
-      h('.tiny.muted', message),
+      h('.tiny.muted-ink', message),
       retry ? h('button.btn', { style: { width: 'auto', padding: '0 22px' }, onclick: () => location.reload() }, t('common.retry')) : null)));
 }
 
