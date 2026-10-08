@@ -83,6 +83,7 @@ export default function cartView() {
   return {
     title: t('cart.title'),
     tab: 'cart',
+    navLogo: false,
     content,
     onMount: () => {
       if (tgMode) tg.mainButton({ text: `${t('cart.checkout')} · ${money(total)}`, onClick: checkout });

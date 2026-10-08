@@ -95,6 +95,7 @@ export default function profileView() {
   return {
     title: t('profile.title'),
     tab: 'profile',
+    navLogo: false,
     content,
     navRight: cartCount()
       ? tap(h('button.nav-btn.icon', { html: icon('bag', 21) }), () => navigate('cart', {}, { replaceStack: true, tab: 'cart' }))

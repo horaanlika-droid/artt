@@ -109,6 +109,7 @@ function applyChrome(entry) {
   }
 
   const title = h('.nav-title', entry.title || '');
+  if (entry.titleClass) title.classList.add(...entry.titleClass);
   if (entry.hideTitleUntilScroll) title.classList.add('hidden');
 
   const right = h('.nav-side.right');

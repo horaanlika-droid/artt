@@ -223,13 +223,14 @@ export default function homeView() {
               state.config?.delivery?.note || '')))),
 
       h('.brand-footer',
-        h('img', { src: 'assets/brand/logo.svg', alt: 'Cocktail Embassy' }),
+        h('img', { src: 'assets/brand/logo-dark.svg', alt: 'Cocktail Embassy' }),
         h('p.brand-footer-title', brand.name || 'Cocktail Embassy'),
         h('p', `${state.products.length} ${locale.current === 'en' ? 'pieces' : 'позиций'} · ${brand.city || 'Dubai'}, ${brand.country || 'UAE'}`),
         h('p', brand.email || ''))));
 
   return {
     title: 'Cocktail Embassy',
+    titleClass: ['brand-mark'],
     content,
     classes: ['home-screen'],
     tab: 'home',
