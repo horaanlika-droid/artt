@@ -5,6 +5,23 @@ import { locale, t, money, moneyShort, usdHint } from './i18n.js';
 
 export { money, moneyShort, usdHint, t };
 
+const glintTimers = new WeakMap();
+
+/** Повторяемый блик на фото товара при добавлении в корзину. */
+export function glint(element) {
+  if (!element) return;
+  const activeTimer = glintTimers.get(element);
+  if (activeTimer) clearTimeout(activeTimer);
+  element.classList.remove('glass-glint');
+  // Перезапуск CSS-анимации даже при быстрых повторных нажатиях.
+  void element.offsetWidth;
+  element.classList.add('glass-glint');
+  glintTimers.set(element, setTimeout(() => {
+    element.classList.remove('glass-glint');
+    glintTimers.delete(element);
+  }, 1050));
+}
+
 /** Создание элемента: h('div.class#id', {props}, children...) */
 export function h(spec, props = null, ...children) {
   let tag = 'div';

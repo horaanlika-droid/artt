@@ -1,5 +1,5 @@
 /** Переиспользуемые карточки: товар, коллекция, степпер количества. */
-import { h, tap, t, money, usdHint, positionsLabel } from './ui.js';
+import { h, tap, t, money, usdHint, positionsLabel, glint } from './ui.js';
 import { icon } from './icons.js';
 import { navigate } from './router.js';
 import { state, addToCart, inCart, isFavorite, toggleFavorite, setQty, categoryCount } from './state.js';
@@ -7,10 +7,21 @@ import { state, addToCart, inCart, isFavorite, toggleFavorite, setQty, categoryC
 export function productCard(p, { fixedWidth = false } = {}) {
   const media = h('.pcard-media');
   if (p.image) {
-    const img = h('img', { src: p.image, alt: p.name, loading: 'lazy', decoding: 'async' });
-    img.addEventListener('load', () => img.classList.add('loaded'));
-    if (img.complete) img.classList.add('loaded');
+    const img = h('img', {
+      src: p.image,
+      alt: p.name,
+      loading: 'eager',
+      decoding: 'async',
+      fetchPriority: 'high',
+    });
+    const missing = () => h('.pcard-noimg', { html: icon('coupe', 34) });
     media.append(img);
+    img.addEventListener('load', () => img.classList.add('loaded'));
+    img.addEventListener('error', () => img.replaceWith(missing()), { once: true });
+    if (img.complete) {
+      if (img.naturalWidth > 0) img.classList.add('loaded');
+      else img.replaceWith(missing());
+    }
   } else {
     media.append(h('.pcard-noimg', { html: icon('coupe', 34) }));
   }
@@ -40,6 +51,7 @@ export function productCard(p, { fixedWidth = false } = {}) {
       return;
     }
     addToCart(p.id);
+    glint(media);
     const n = inCart(p.id);
     addBtn.classList.add('in-cart');
     addBtn.innerHTML = `<b style="font-size:13px">${n}</b>`;

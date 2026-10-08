@@ -15,8 +15,8 @@ const tabbarEl = () => document.getElementById('tabbar');
 /** Таб-бар собирается на каждом рендере, поэтому подписи берём через t(). */
 export const TABS = () => [
   { id: 'home', title: t('tab.home'), icon: 'home', route: 'home' },
-  { id: 'catalog', title: t('tab.catalog'), icon: 'grid', route: 'catalog' },
-  { id: 'favorites', title: t('tab.favorites'), icon: 'heart', route: 'favorites' },
+  { id: 'search', title: t('search.title'), icon: 'search', route: 'search' },
+  { id: 'catalog', title: t('tab.catalog'), icon: 'plusCircle', route: 'catalog' },
   { id: 'cart', title: t('tab.cart'), icon: 'bag', route: 'cart' },
   { id: 'profile', title: t('tab.profile'), icon: 'person', route: 'profile' },
 ];
@@ -55,6 +55,30 @@ function languageSwitcher() {
   return btn;
 }
 
+function desktopNavigation(entry) {
+  const navigateTo = (route, tab) => navigate(route, {}, { replaceStack: true, tab });
+  const link = (label, route, tab, active) => tap(
+    h('button.desktop-link', { class: active ? 'active' : '', type: 'button' }, label),
+    () => navigateTo(route, tab),
+    'select',
+  );
+  const onCatalog = entry.name === 'catalog' || entry.name === 'search';
+  const onAbout = entry.name === 'about' || entry.name === 'delivery';
+  return h('.desktop-nav',
+    tap(h('button.desktop-brand', { type: 'button' }, 'Cocktail Embassy'),
+      () => navigateTo('home', 'home'), 'select'),
+    h('.desktop-nav-links',
+      link(locale.current === 'en' ? 'Shop' : 'Каталог', 'catalog', 'catalog', onCatalog),
+      link(locale.current === 'en' ? 'Collections' : 'Коллекции', 'catalog', 'catalog', false),
+      link(locale.current === 'en' ? 'About' : 'О бренде', 'about', 'profile', onAbout),
+      tap(h('button.desktop-profile', {
+        type: 'button',
+        'aria-label': locale.current === 'en' ? 'Account' : 'Кабинет',
+        html: icon('person', 20),
+      }), () => navigateTo('profile', 'profile'), 'select')),
+  );
+}
+
 function applyChrome(entry) {
   const nav = navbarEl();
   nav.innerHTML = '';
@@ -64,9 +88,9 @@ function applyChrome(entry) {
   const canGoBack = stack.length > 1;
   const left = h('.nav-side');
   if (entry.navLeft) left.append(entry.navLeft);
-  else if (canGoBack) {
+  else if (canGoBack && entry.navBack !== false) {
     left.append(tap(h('button.nav-btn', { html: `${icon('chevronLeft', 22)}<span>${t('common.back')}</span>` }), () => back(), 'light'));
-  } else if (entry.navLogo !== false) {
+  } else if (!canGoBack && entry.navLogo !== false) {
     left.append(h('img.nav-logo', { src: 'assets/brand/logo.svg', alt: 'Cocktail Embassy' }));
   }
 
@@ -75,9 +99,9 @@ function applyChrome(entry) {
 
   const right = h('.nav-side.right');
   if (entry.navRight) right.append(entry.navRight);
-  right.append(languageSwitcher());
+  if (entry.navLanguage !== false) right.append(languageSwitcher());
 
-  nav.append(left, title, right);
+  nav.append(left, title, right, desktopNavigation(entry));
 
   entry.screen.onscroll = () => {
     const y = entry.screen.scrollTop;
@@ -86,7 +110,7 @@ function applyChrome(entry) {
     entry.onScroll?.(y);
   };
 
-  tg.backButton(canGoBack, () => back());
+  tg.backButton(canGoBack && entry.navBack !== false, () => back());
   renderTabbar(entry);
 }
 
@@ -96,7 +120,8 @@ function renderTabbar(entry) {
   bar.classList.toggle('hidden', hidden);
   if (hidden) return;
 
-  const activeTab = entry.tab || stack[0]?.tab || 'home';
+  const requestedTab = entry.tab || stack[0]?.tab || 'home';
+  const activeTab = requestedTab === 'favorites' ? 'profile' : requestedTab;
   bar.innerHTML = '';
   for (const tab of TABS()) {
     const badgeCount = tab.id === 'cart' ? cartCount() : 0;
@@ -202,4 +227,5 @@ export function updateTabBadges() {
 
 subscribe((event) => {
   if (event === 'cart') updateTabBadges();
+  if (event === 'remote-ready') refresh().catch((err) => console.warn('[router] refresh skipped:', err));
 });
