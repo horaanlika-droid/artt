@@ -1,202 +1,327 @@
 {
- "AG0001": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0001.jpg"
- },
- "AG0002": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0002.jpg"
- },
- "AG0003": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0003.jpg"
- },
- "AG0004": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0004.jpg"
- },
- "AG0006": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0006.jpg"
- },
- "AG0008": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0008.jpg"
- },
- "AG0009": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0009.jpg"
- },
- "AG0010": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0010.jpg"
- },
- "AG0011": {
-  "source": "ai-studio-render-style-v2",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0011.jpg"
- },
- "AG0012": {
-  "source": "ai-studio-render-style-v2",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0012.jpg"
- },
- "AG0013": {
-  "source": "ai-studio-render-style-v2",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0013.jpg"
- },
- "AG0014": {
-  "source": "ai-studio-render-style-v2",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0014.jpg"
- },
  "AG0015": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0015.jpg"
+  "file": "AG0015.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0016": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0016.jpg"
+  "file": "AG0016.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0017": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0017.jpg"
+  "file": "AG0017.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0018": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0018.jpg"
+  "file": "AG0018.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
- "AG0019": {
-  "source": "ai-studio-render-style-v2",
+ "AG0011": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0019.jpg"
+  "file": "AG0011.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0012": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0012.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0013": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0013.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0014": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0014.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0008": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0008.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0010": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0010.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0009": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0009.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0002": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0002.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0003": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0003.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0001": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0001.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0006": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0006.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0004": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   146,
+   146
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0004.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0020": {
-  "source": "ai-studio-render-style-v3-flat-bg",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0020.jpg"
+  "file": "AG0020.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0021": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0021.jpg"
+  "file": "AG0021.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0022": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   111,
+   167
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0022.jpg"
+  "file": "AG0022.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0023": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0023.jpg"
+  "file": "AG0023.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0024": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0024.jpg"
- },
- "AG0025": {
-  "source": "ai-studio-render-style-v3-flat-bg",
-  "size": [
-   928,
-   1152
-  ],
-  "file": "AG0025.jpg"
+  "file": "AG0024.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0026": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0026.jpg"
+  "file": "AG0026.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0025": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   97,
+   146
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0025.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  },
  "AG0027": {
-  "source": "ai-studio-render-style-v2",
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   146,
+   146
+  ],
   "size": [
    928,
    1152
   ],
-  "file": "AG0027.jpg"
+  "file": "AG0027.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+ },
+ "AG0019": {
+  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "sourceSize": [
+   146,
+   146
+  ],
+  "size": [
+   928,
+   1152
+  ],
+  "file": "AG0019.jpg",
+  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
  }
 }

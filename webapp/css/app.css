@@ -1,6 +1,6 @@
 /* Компоненты витрины Cocktail Embassy.
-   Фирменный стиль (IMG_1430 / IMG_1431): один тёмно-синий фон без градиентов и карточек-подложек,
-   бокалы на фото уже стоят на таком же фоне, белые pill-кнопки, крупный заголовок «Levitating». */
+   Форма посуды — из PDF; фотографии сведены к единому фону #141d29 без карточек и рамок.
+   Тёмный экран, крупная белая типографика, плоские медиа-блоки и pill-кнопки как в референсе. */
 
 /* ── главная: обложка ──────────────────────────────────────── */
 .hero {
@@ -22,7 +22,7 @@
   white-space: nowrap;
 }
 
-/* сцена: фото 4:5 с тем же фоном, что и у интерфейса — без рамок и подложек */
+/* Фото 4:5 на общем фоне приложения — без рамки и обрезки тонких ножек. */
 .hero-stage {
   position: relative;
   width: 76%;
@@ -30,16 +30,17 @@
   margin: -8px auto 0;
   aspect-ratio: 4 / 5;
   overflow: hidden;
+  background: var(--product-photo-bg);
 }
 .hero-slide {
   position: absolute;
   inset: 0;
+  background: var(--product-photo-bg);
   opacity: 0;
-  transform: scale(1.03);
-  transition: opacity 0.7s ease, transform 5.6s ease-out;
+  transition: opacity 0.7s ease;
 }
-.hero-slide.active { opacity: 1; transform: scale(1); }
-.hero-slide img { width: 100%; height: 100%; object-fit: cover; }
+.hero-slide.active { opacity: 1; }
+.hero-slide img { width: 100%; height: 100%; object-fit: contain; filter: contrast(1.2); }
 
 .hero-info { margin-top: 2px; }
 .hero-name { margin: 0; font-size: 22px; font-weight: 600; letter-spacing: -0.3px; color: var(--label); }
@@ -131,23 +132,22 @@
 }
 .pcard:active { transform: scale(0.985); }
 
-/* фото 4:5 — ровно как исходные файлы; фон фото совпадает с фоном страницы */
+/* Фото 4:5 на бесшовном фоне, целиком и без карточки вокруг стекла. */
 .pcard-media {
   position: relative;
   aspect-ratio: 4 / 5;
-  background: var(--bg);
-  border-radius: 18px;
+  background: var(--product-photo-bg);
   overflow: hidden;
 }
 .pcard-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  filter: contrast(1.2);
   opacity: 0;
-  transform: scale(1.03);
-  transition: opacity 0.4s ease, transform 0.6s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: opacity 0.4s ease;
 }
-.pcard-media img.loaded { opacity: 1; transform: scale(1); }
+.pcard-media img.loaded { opacity: 1; }
 .pcard-noimg { font-size: 34px; color: var(--label-4); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
 
 .badge {
@@ -226,9 +226,8 @@
 .cat-card {
   position: relative;
   height: 150px;
-  border-radius: 20px;
   overflow: hidden;
-  background: var(--bg);
+  background: var(--product-photo-bg);
   color: var(--label);
   display: flex;
   flex-direction: column;
@@ -239,7 +238,9 @@
   inset: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+  background: var(--product-photo-bg);
+  filter: contrast(1.2);
 }
 .cat-card::after {
   content: '';
@@ -264,10 +265,10 @@
 /* ── карточка товара (IMG_1430): фото на весь экран, текст по центру ── */
 .pd-gallery {
   position: relative;
-  background: var(--bg);
+  background: var(--product-photo-bg);
   overflow: hidden;
 }
-.pd-gallery img { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: cover; }
+.pd-gallery img { width: 100%; aspect-ratio: 4 / 5; height: auto; object-fit: contain; filter: contrast(1.2); }
 .pd-flags { position: absolute; top: 14px; left: 16px; display: flex; gap: 6px; z-index: 1; }
 .pd-gallery .fav-btn { top: 12px; right: 12px; z-index: 1; }
 
@@ -293,14 +294,13 @@
   width: 58px;
   height: 58px;
   flex: none;
-  border-radius: 14px;
-  background: var(--bg);
+  background: var(--product-photo-bg);
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.cart-thumb img { width: 100%; height: 100%; object-fit: cover; }
+.cart-thumb img { width: 100%; height: 100%; object-fit: contain; filter: contrast(1.2); }
 .cart-body { flex: 1; min-width: 0; }
 .cart-name { font-size: 14.5px; font-weight: 600; color: var(--label); }
 .cart-sub { margin-top: 2px; font-size: 12px; color: var(--label-3); }
@@ -335,7 +335,7 @@
 .order-head { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .order-num { font-size: 16px; font-weight: 700; }
 .order-thumbs { display: flex; gap: 6px; margin-top: 10px; }
-.order-thumbs .cart-thumb { width: 42px; height: 42px; border-radius: 11px; }
+.order-thumbs .cart-thumb { width: 42px; height: 42px; }
 .order-foot { display: flex; align-items: center; justify-content: space-between; margin-top: 10px; font-size: 13px; color: var(--label-3); }
 
 .status-chip {
