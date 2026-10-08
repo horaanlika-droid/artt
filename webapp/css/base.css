@@ -1,40 +1,44 @@
 /* Базовый слой: тема, типографика, примитивы.
-   Интерфейс и фотографии товаров сведены к единому тёмно-синему фону #141d29.
-   Товарные формы берутся из PDF; изображения без рамок, чтобы тонкие стенки и ножки стекла читались.
-   Белая крупная типографика без засечек, белые pill-кнопки, плоский таб-бар. */
+   Светлый премиум-интерфейс: фон приложения выбран равным фону студийных фотографий
+   товаров (#f4f4f6 — цвет фона кадров из PDF-прайса), поэтому снимки ложатся в витрину
+   бесшовно, без вырезания фона и прямоугольных рамок.
+   Тёмное «чернильное» ink-настроение: белая типографика на тёмных pill-кнопках,
+   белёсые поверхности, тонкие hairline-границы, сдержанный синий акцент. */
 :root {
-  --bg: #141d29;              /* общий фон интерфейса и экранов */
-  --bg-soft: #1a2433;
-  --navy: #141d29;
-  --navy-2: #1a2433;
-  --navy-3: #243044;
-  --surface: rgba(255, 255, 255, 0.05);
-  --surface-2: rgba(255, 255, 255, 0.09);
-  --card: #141d29;
-  --product-photo-bg: #141d29;
-  --hairline: rgba(255, 255, 255, 0.1);
-  --hairline-2: rgba(255, 255, 255, 0.2);
-  --hairline-dark: rgba(255, 255, 255, 0.1);
-  --label: #ffffff;
-  --label-2: rgba(255, 255, 255, 0.72);
-  --label-3: rgba(255, 255, 255, 0.5);
-  --label-4: rgba(255, 255, 255, 0.28);
-  --ink: #ffffff;
-  --ink-2: rgba(255, 255, 255, 0.72);
-  --ink-3: rgba(255, 255, 255, 0.5);
-  --accent: #ffffff;          /* основная кнопка — белая pill */
-  --accent-ink: #141d29;
-  --gold: #2b91ff;            /* синий акцент активной вкладки из мобильного референса */
-  --gold-deep: #7fb4ff;
-  --green: #4ec07a;
-  --red: #ff6961;
-  --blue: #5b9dff;
+  --bg: #f4f4f6;              /* общий фон интерфейса = фон товарных фото */
+  --bg-soft: #edeef1;
+  --navy: #171a21;            /* чернила: основной тёмный текст и primary-кнопки */
+  --navy-2: #ffffff;          /* поверхности шторок и модальных панелей */
+  --navy-3: #e9eaee;
+  --surface: #ffffff;
+  --surface-2: #f0f0f3;
+  --card: #ffffff;
+  --product-photo-bg: #f4f4f6; /* фон, на который вписан кадр (цвет фона исходного снимка) */
+  --hairline: rgba(23, 26, 33, 0.08);
+  --hairline-2: rgba(23, 26, 33, 0.16);
+  --hairline-dark: rgba(23, 26, 33, 0.08);
+  --label: #171a21;
+  --label-2: rgba(23, 26, 33, 0.62);
+  --label-3: rgba(23, 26, 33, 0.44);
+  --label-4: rgba(23, 26, 33, 0.22);
+  --ink: #171a21;
+  --ink-2: rgba(23, 26, 33, 0.62);
+  --ink-3: rgba(23, 26, 33, 0.44);
+  --accent: #171a21;          /* основная кнопка — тёмная pill на светлом фоне */
+  --accent-ink: #ffffff;
+  --gold: #2464ff;            /* синий акцент: активная вкладка, контролы */
+  --gold-deep: #1d53dd;
+  --green: #1e9e57;
+  --red: #e0483f;
+  --blue: #2464ff;
   --radius: 18px;
   --radius-lg: 24px;
   --safe-top: 0px;
   --safe-bottom: 0px;
   --nav-h: 52px;
   --tab-h: 56px;
+  --shadow-card: 0 1px 2px rgba(23, 26, 33, 0.04), 0 10px 28px rgba(23, 26, 33, 0.05);
+  --shadow-pop: 0 18px 44px rgba(23, 26, 33, 0.14);
   --font: -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", "Segoe UI", "Helvetica Neue", Roboto, Arial, sans-serif;
   --mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
 }
@@ -57,7 +61,7 @@ body {
   line-height: 1.35;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  color-scheme: dark;
+  color-scheme: light;
 }
 
 img { max-width: 100%; display: block; }
@@ -93,7 +97,7 @@ a { color: var(--gold-deep); text-decoration: none; }
 
 .screen.no-tabbar { padding-bottom: calc(var(--safe-bottom) + 28px); }
 
-/* шапка: прозрачная, название центрировано капсом (как «THE PONY GLASS SHOP») */
+/* шапка: полупрозрачная, при скролле — hairline снизу */
 .navbar {
   position: fixed;
   top: 0;
@@ -105,13 +109,15 @@ a { color: var(--gold-deep); text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 8px;
-  background: var(--bg);
+  background: rgba(244, 244, 246, 0.86);
+  backdrop-filter: blur(20px) saturate(1.3);
+  -webkit-backdrop-filter: blur(20px) saturate(1.3);
   border-bottom: 0.5px solid transparent;
   transition: border-color 0.25s ease, background 0.25s ease;
 }
 
-.navbar.scrolled { border-bottom-color: var(--hairline); }
-.navbar.transparent { background: var(--bg); border-bottom-color: transparent; }
+.navbar.scrolled { border-bottom-color: var(--hairline); background: rgba(244, 244, 246, 0.96); }
+.navbar.transparent { background: rgba(244, 244, 246, 0.86); border-bottom-color: transparent; }
 
 .nav-side { display: flex; align-items: center; gap: 6px; min-width: 60px; }
 .nav-side.right { justify-content: flex-end; }
@@ -123,7 +129,7 @@ a { color: var(--gold-deep); text-decoration: none; }
   font-weight: 500;
   letter-spacing: 0.18em;
   text-transform: uppercase;
-  color: var(--label-2);
+  color: var(--label-3);
   opacity: 1;
   transition: opacity 0.2s ease;
   white-space: nowrap;
@@ -146,9 +152,9 @@ a { color: var(--gold-deep); text-decoration: none; }
   font-weight: 500;
 }
 .nav-btn.icon { padding: 0 6px; color: var(--ink); }
-.nav-btn:active { opacity: 0.6; }
+.nav-btn:active { opacity: 0.55; }
 
-/* ── таб-бар: плоская полоса внизу, только иконки (как в референсе) ── */
+/* ── таб-бар: светлая blur-панель, активная вкладка чернильная ── */
 .tabbar {
   position: fixed;
   left: 0;
@@ -159,9 +165,9 @@ a { color: var(--gold-deep); text-decoration: none; }
   align-items: stretch;
   height: calc(var(--safe-bottom) + var(--tab-h));
   padding-bottom: var(--safe-bottom);
-  background: rgba(20, 29, 41, 0.97);
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(22px) saturate(1.4);
+  -webkit-backdrop-filter: blur(22px) saturate(1.4);
   border-top: 0.5px solid var(--hairline);
   transition: transform 0.3s cubic-bezier(0.32, 0.72, 0, 1);
 }
@@ -177,7 +183,7 @@ a { color: var(--gold-deep); text-decoration: none; }
   color: var(--label-3);
   position: relative;
 }
-.tab.active { color: var(--gold); }
+.tab.active { color: var(--ink); }
 .tab:active { opacity: 0.65; }
 /* подпись вкладки скрыта визуально, остаётся для скринридеров */
 .tab > span:nth-child(2) {
@@ -197,8 +203,8 @@ a { color: var(--gold-deep); text-decoration: none; }
   height: 17px;
   padding: 0 4px;
   border-radius: 9px;
-  background: #ffffff;
-  color: var(--navy);
+  background: var(--gold);
+  color: #ffffff;
   font-size: 10px;
   font-weight: 700;
   line-height: 17px;
@@ -223,7 +229,7 @@ a { color: var(--gold-deep); text-decoration: none; }
 .section-title {
   padding: 0 20px 8px;
   font-size: 12.5px;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--label-3);
@@ -233,10 +239,11 @@ a { color: var(--gold-deep); text-decoration: none; }
 .group {
   background: var(--surface);
   color: var(--label);
-  border-radius: 22px;
+  border-radius: 20px;
   margin: 0 16px;
   overflow: hidden;
   border: 1px solid var(--hairline);
+  box-shadow: var(--shadow-card);
 }
 
 .cell {
@@ -248,7 +255,7 @@ a { color: var(--gold-deep); text-decoration: none; }
   border-bottom: 0.5px solid var(--hairline);
 }
 .cell:last-child { border-bottom: 0; }
-.cell.tappable:active { background: rgba(255, 255, 255, 0.05); }
+.cell.tappable:active { background: rgba(23, 26, 33, 0.05); }
 .cell-icon { display: flex; align-items: center; justify-content: center; width: 26px; color: var(--gold); }
 .cell-body { flex: 1; min-width: 0; }
 .cell-title { font-size: 15.5px; color: var(--label); }
@@ -256,7 +263,7 @@ a { color: var(--gold-deep); text-decoration: none; }
 .cell-value { font-size: 15px; color: var(--label-2); }
 .cell-chevron { color: var(--label-4); display: flex; }
 
-/* основная кнопка: белая pill с тёмным текстом (как «Add to Cart») */
+/* основная кнопка: тёмная pill со светлым текстом */
 .btn {
   display: flex;
   align-items: center;
@@ -270,23 +277,23 @@ a { color: var(--gold-deep); text-decoration: none; }
   font-size: 16.5px;
   font-weight: 600;
   letter-spacing: -0.1px;
-  transition: transform 0.12s ease, opacity 0.12s ease;
+  transition: transform 0.12s ease, opacity 0.12s ease, background 0.15s ease;
 }
-.btn:active { transform: scale(0.985); opacity: 0.9; }
-.btn:disabled { opacity: 0.5; }
-.btn.secondary { background: rgba(255, 255, 255, 0.14); color: var(--label); }
-.btn.danger { background: transparent; color: var(--red); border: 1px solid rgba(255, 105, 97, 0.4); }
+.btn:active { transform: scale(0.985); opacity: 0.92; }
+.btn:disabled { opacity: 0.45; }
+.btn.secondary { background: var(--surface); color: var(--ink); border: 1px solid var(--hairline-2); }
+.btn.danger { background: transparent; color: var(--red); border: 1px solid rgba(224, 72, 63, 0.35); }
 
 .pill {
   padding: 8px 14px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.06);
+  background: var(--surface);
   border: 1px solid var(--hairline-2);
   font-size: 14px;
   color: var(--label-2);
   white-space: nowrap;
 }
-.pill.active { background: #ffffff; border-color: #ffffff; color: var(--navy); font-weight: 600; }
+.pill.active { background: var(--accent); border-color: var(--accent); color: #ffffff; font-weight: 600; }
 
 .chips {
   display: flex;
@@ -318,8 +325,9 @@ a { color: var(--gold-deep); text-decoration: none; }
   height: 46px;
   padding: 0 16px;
   border-radius: 999px;
-  background: rgba(255, 255, 255, 0.08);
+  background: var(--surface);
   border: 1px solid var(--hairline);
+  box-shadow: var(--shadow-card);
   color: var(--label-3);
 }
 .searchbar input { flex: 1; border: 0; background: none; outline: none; font-size: 16px; min-width: 0; color: var(--label); }
@@ -328,7 +336,7 @@ a { color: var(--gold-deep); text-decoration: none; }
 .radio { width: 21px; height: 21px; border-radius: 50%; border: 1.5px solid var(--label-4); flex: none; }
 .radio.on { border-color: var(--gold); box-shadow: inset 0 0 0 5px var(--gold); }
 
-.switch { width: 47px; height: 29px; border-radius: 15px; background: rgba(255, 255, 255, 0.18); position: relative; transition: background 0.2s; flex: none; }
+.switch { width: 47px; height: 29px; border-radius: 15px; background: rgba(23, 26, 33, 0.16); position: relative; transition: background 0.2s; flex: none; }
 .switch::after {
   content: '';
   position: absolute;
@@ -338,9 +346,10 @@ a { color: var(--gold-deep); text-decoration: none; }
   height: 23px;
   border-radius: 50%;
   background: #fff;
+  box-shadow: 0 1px 3px rgba(23, 26, 33, 0.2);
   transition: transform 0.22s cubic-bezier(0.32, 0.72, 0, 1);
 }
-.switch.on { background: var(--gold); }
+.switch.on { background: var(--accent); }
 .switch.on::after { transform: translateX(18px); }
 
 .mono { font-variant-numeric: tabular-nums; }
@@ -357,7 +366,7 @@ a { color: var(--gold-deep); text-decoration: none; }
   height: 26px;
   border-radius: 50%;
   border: 2.5px solid var(--hairline-2);
-  border-top-color: var(--label);
+  border-top-color: var(--ink);
   animation: spin 0.8s linear infinite;
 }
 @keyframes spin { to { transform: rotate(360deg); } }
@@ -371,9 +380,9 @@ a { color: var(--gold-deep); text-decoration: none; }
   margin: 16px 16px 0;
   padding: 13px 15px;
   border-radius: 16px;
-  background: rgba(91, 157, 255, 0.12);
-  border: 1px solid rgba(91, 157, 255, 0.3);
-  color: #bcd6ff;
+  background: rgba(36, 100, 255, 0.07);
+  border: 1px solid rgba(36, 100, 255, 0.22);
+  color: #2a4bb5;
   font-size: 14px;
   line-height: 1.45;
 }
@@ -395,18 +404,18 @@ a { color: var(--gold-deep); text-decoration: none; }
   max-width: calc(100% - 40px);
   padding: 11px 18px;
   border-radius: 999px;
-  background: #ffffff;
-  color: var(--navy);
+  background: var(--ink);
+  color: #ffffff;
   font-size: 14px;
   font-weight: 500;
   text-align: center;
-  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.35);
+  box-shadow: var(--shadow-pop);
   animation: fadeIn 0.2s ease;
 }
 .toast.out { opacity: 0; transition: opacity 0.25s ease; }
 
 .overlays { position: fixed; inset: 0; z-index: 150; pointer-events: none; }
-.backdrop { position: absolute; inset: 0; background: rgba(0, 0, 0, 0.55); opacity: 0; transition: opacity 0.3s ease; }
+.backdrop { position: absolute; inset: 0; background: rgba(23, 26, 33, 0.38); opacity: 0; transition: opacity 0.3s ease; }
 .backdrop.show { opacity: 1; }
 
 .sheet {
@@ -426,7 +435,7 @@ a { color: var(--gold-deep); text-decoration: none; }
   transition: transform 0.34s cubic-bezier(0.32, 0.72, 0, 1);
 }
 .sheet.show { transform: translateY(0); }
-.sheet-grabber { width: 38px; height: 5px; border-radius: 3px; background: var(--label-4); margin: 8px auto 4px; }
+.sheet-grabber { width: 38px; height: 5px; border-radius: 3px; background: var(--hairline-2); margin: 8px auto 4px; }
 .sheet-head { display: flex; align-items: center; gap: 8px; padding: 4px 12px 6px 20px; }
 .sheet-title { flex: 1; font-size: 18px; font-weight: 600; color: var(--label); }
 .sheet-body { overflow-y: auto; padding-bottom: 8px; }

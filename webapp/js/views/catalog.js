@@ -150,6 +150,7 @@ export default function catalogView(params = {}) {
   return {
     title: t('catalog.title'),
     tab: 'catalog',
+    navLogo: false,
     content,
     navRight: tap(h('button.nav-btn.icon', { html: icon('sliders', 21) }), openFilters, 'select'),
   };

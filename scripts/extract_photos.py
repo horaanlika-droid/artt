@@ -1,9 +1,14 @@
 #!/usr/bin/env python3
-"""Извлечь формы посуды непосредственно из PDF-прайса Cocktail Embassy.
+"""Извлечь фотографии товаров из PDF-прайса Cocktail Embassy — исходные кадры, без вырезания фона.
 
-Никакой генерации/перерисовки товара: исходные контуры, пропорции, ножки и основания
-берутся из растра PDF. Для тёмной витрины только подавляется фон фотографии и усиливаются
-уже имеющиеся в исходнике контрастные блики стекла; геометрия не меняется.
+Фотографии сохраняются целиком, вместе со студийным фоном исходника: никакой маскировки,
+подавления фона и перерисовки формы стекла. Исходный кадр вписывается в кадр витрины 4:5,
+а доборная площадь заполняется зеркальным повтором краёв собственного фона снимка —
+прямоугольной рамки не остаётся, и фото бесшовно ложится на фон приложения
+(цвет фона витрины выбран равным фону снимков, см. webapp/css/base.css).
+
+Качество: кадр масштабируется Lanczos-ом до разрешения витрины, фон после добора слегка
+сглаживается, а кромки стекла возвращает мягкий unsharp — геометрия и пропорции не меняются.
 
 Запуск:
     python3 scripts/extract_photos.py
@@ -19,25 +24,15 @@ import re
 import sys
 
 import pymupdf
-from PIL import Image, ImageChops, ImageFilter, ImageOps
+from PIL import Image, ImageFilter, ImageOps
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "webapp" / "assets" / "products"
-OUTPUT_SIZE = (928, 1152)  # кадр 4:5, используемый витриной
-PHOTO_BACKGROUND = (20, 29, 41)  # #141d29 — единый фон приложения и товарных фото
-GLASS_HIGHLIGHT = (232, 241, 253)
-GLASS_GLOW = (81, 105, 137)
-FIT_RATIO = 0.92
-
-# В прайсе эти два снимка сделаны на контрастном чёрно-белом фоне-разделителе.
-# Модель служит только для удаления фона перед извлечением исходного контура.
-SPLIT_BACKGROUND = {
-    "AG0004": (93, 67),
-    "AG0019": (131, 63),
-}
-# Для этого фото в прайсе тёмная студийная сцена с контрастным столом.
-# Сохраняем исходные пиксели предмета, но отделяем фон, чтобы не оставить прямоугольную рамку.
-DARK_STUDIO_PHOTOS = {"AG0027"}
+OUTPUT_SIZE = (1080, 1350)  # кадр 4:5 витрины, достаточно для @2x/@3x на телефоне и десктопе
+SEAM_BLUR = 1.05            # лёгкое сглаживание шва между фоном снимка и его зеркальным добором
+SHARPEN_RADIUS = 2.2        # возврат чёткости кромок стекла после масштабирования
+SHARPEN_PERCENT = 58
+PRE_BLUR = 0.4              # лёгкое до-сглаживание JPEG-шума исходника перед апскейлом
 
 
 def find_pdf() -> pathlib.Path:
@@ -79,123 +74,67 @@ def product_images(page) -> list[tuple[int, list[float], int, int]]:
     return sorted(items, key=lambda item: (item[1][1], item[1][0]))
 
 
-def split_background_residual(gray: Image.Image, article: str) -> Image.Image:
-    """Подавить чёрно-белую диагональ фона, оставив детали предмета."""
-    width, height = gray.size
-    pixels = gray.load()
-    top_x, bottom_x = SPLIT_BACKGROUND[article]
-    background = Image.new("L", gray.size)
-    background_pixels = background.load()
+def fit_frame(photo: Image.Image) -> Image.Image:
+    """Вписать исходный кадр в 4:5, добрав фон зеркальным повтором краёв самого снимка.
 
-    for y in range(height):
-        left = sorted(pixels[x, y] for x in range(min(8, width)))[min(4, width - 1)]
-        right_start = max(0, width - 8)
-        right = sorted(pixels[x, y] for x in range(right_start, width))[min(4, width - right_start - 1)]
-        divider_x = top_x + (bottom_x - top_x) * y / max(1, height - 1)
-        # Небольшой мягкий переход повторяет антиалиасинг шва на исходном фото.
-        transition = 4
-        for x in range(width):
-            t = max(0.0, min(1.0, (x - (divider_x - transition / 2)) / transition))
-            background_pixels[x, y] = round(left * (1 - t) + right * t)
+    Фоновые градиенты студийных кадров плавные, поэтому зеркальный повтор краёвой зоны
+    продолжает вертикальный градиент без видимого шва; углы закрываются двойным зеркалом.
+    """
+    frame_w, frame_h = OUTPUT_SIZE
+    width, height = photo.size
+    scale = min(frame_w / width, frame_h / height)
+    new_w, new_h = max(1, round(width * scale)), max(1, round(height * scale))
+    scaled = photo.resize((new_w, new_h), Image.Resampling.LANCZOS)
 
-    return ImageChops.difference(gray, background)
+    off_x, off_y = (frame_w - new_w) // 2, (frame_h - new_h) // 2
+    canvas = Image.new("RGB", (frame_w, frame_h), (245, 245, 247))
+
+    def mirrored(box: tuple[int, int, int, int], hflip: bool, vflip: bool) -> Image.Image:
+        part = scaled.crop(box)
+        if hflip:
+            part = part.transpose(Image.FLIP_LEFT_RIGHT)
+        if vflip:
+            part = part.transpose(Image.FLIP_TOP_BOTTOM)
+        return part
+
+    # Горизонтальный добор: зеркальные копии крайних столбцов по высоте кадра.
+    pad_l, pad_r = off_x, frame_w - (off_x + new_w)
+    if pad_l > 0:
+        canvas.paste(mirrored((0, 0, pad_l, new_h), True, False), (off_x - pad_l, off_y))
+    if pad_r > 0:
+        canvas.paste(mirrored((new_w - pad_r, 0, new_w, new_h), True, False), (off_x + new_w, off_y))
+    # Вертикальный добор: зеркальные копии крайних строк по ширине кадра.
+    pad_t, pad_b = off_y, frame_h - (off_y + new_h)
+    if pad_t > 0:
+        canvas.paste(mirrored((0, 0, new_w, pad_t), False, True), (off_x, off_y - pad_t))
+    if pad_b > 0:
+        canvas.paste(mirrored((0, new_h - pad_b, new_w, new_h), False, True), (off_x, off_y + new_h))
+    # Углы: двойное зеркало угловых блоков исходника.
+    if pad_l and pad_t:
+        canvas.paste(mirrored((0, 0, pad_l, pad_t), True, True), (off_x - pad_l, off_y - pad_t))
+    if pad_r and pad_t:
+        canvas.paste(mirrored((new_w - pad_r, 0, new_w, pad_t), True, True), (off_x + new_w, off_y - pad_t))
+    if pad_l and pad_b:
+        canvas.paste(mirrored((0, new_h - pad_b, pad_l, pad_b), True, True),
+                     (off_x - pad_l, off_y + new_h))
+    if pad_r and pad_b:
+        canvas.paste(mirrored((new_w - pad_r, new_h - pad_b, new_w, new_h), True, True),
+                     (off_x + new_w, off_y + new_h))
+    # Сами исходные пиксели по центру.
+    canvas.paste(scaled, (off_x, off_y))
+    return canvas
 
 
-def highlight_mask(image: Image.Image, article: str) -> Image.Image:
-    """Перенести видимые в PDF блики/контуры на тёмную сцену без перерисовки формы."""
-    gray = ImageOps.grayscale(image.convert("RGB"))
-    if article in SPLIT_BACKGROUND:
-        detail_source = split_background_residual(gray, article)
-    else:
-        detail_source = gray
-
-    # Высокочастотная часть сохраняет кромки бокала и тонкие ножки, подавляя
-    # бумажный фон, плавные градиенты и тени исходной миниатюры.
-    local_background = detail_source.filter(ImageFilter.GaussianBlur(radius=5))
-    detail = ImageChops.difference(detail_source, local_background)
-
-    lut = []
-    for value in range(256):
-        strength = max(0.0, (value - 7) / 85)
-        lut.append(round(255 * min(1.0, strength ** 0.55)))
-    return detail.point(lut)
-
-
-def fit_mask(mask: Image.Image) -> tuple[Image.Image, tuple[int, int]]:
-    """Обрезать только пустые поля маски и вписать целую форму в холст 4:5."""
-    width, height = OUTPUT_SIZE
-    bounds = mask.point(lambda value: 255 if value > 24 else 0).getbbox()
-    if bounds:
-        padding = int(max(mask.size) * 0.12)
-        left = max(0, bounds[0] - padding)
-        top = max(0, bounds[1] - padding)
-        right = min(mask.width, bounds[2] + padding)
-        bottom = min(mask.height, bounds[3] + padding)
-        mask = mask.crop((left, top, right, bottom))
-
-    fitted = ImageOps.contain(
-        mask,
-        (round(width * FIT_RATIO), round(height * FIT_RATIO)),
-        method=Image.Resampling.LANCZOS,
+def render_product(source: Image.Image) -> Image.Image:
+    """Исходный кадр на фоне своего же снимка — без вырезания фона и изменения формы."""
+    if PRE_BLUR:
+        source = source.filter(ImageFilter.GaussianBlur(PRE_BLUR))
+    canvas = fit_frame(source)
+    if SEAM_BLUR:
+        canvas = canvas.filter(ImageFilter.GaussianBlur(SEAM_BLUR))
+    return canvas.filter(
+        ImageFilter.UnsharpMask(radius=SHARPEN_RADIUS, percent=SHARPEN_PERCENT, threshold=2)
     )
-    return fitted, ((width - fitted.width) // 2, (height - fitted.height) // 2)
-
-
-def studio_foreground_mask(source: Image.Image) -> Image.Image:
-    """Выделить контрастные пиксели предмета относительно фона той же строки."""
-    rgb = source.convert("RGB")
-    width, height = rgb.size
-    pixels = rgb.load()
-    mask = Image.new("L", rgb.size)
-    mask_pixels = mask.load()
-    strip = max(2, min(12, width // 8))
-
-    for y in range(height):
-        border = [pixels[x, y] for x in range(strip)] + [pixels[x, y] for x in range(width - strip, width)]
-        background = tuple(
-            sorted(pixel[channel] for pixel in border)[len(border) // 2]
-            for channel in range(3)
-        )
-        for x in range(width):
-            distance = max(abs(pixels[x, y][channel] - background[channel]) for channel in range(3))
-            strength = max(0.0, min(1.0, (distance - 55) / 80)) ** 0.65
-            mask_pixels[x, y] = round(255 * strength)
-
-    return mask.filter(ImageFilter.GaussianBlur(radius=0.55))
-
-
-def render_glass(article: str, source: Image.Image) -> Image.Image:
-    """Показать PDF-фото на бесшовном тёмном фоне без рамки/карточки."""
-    width, height = OUTPUT_SIZE
-    background = Image.new("RGB", OUTPUT_SIZE, PHOTO_BACKGROUND)
-
-    if article in DARK_STUDIO_PHOTOS:
-        # Оставляем исходные пиксели чайника, но не переносим в интерфейс квадратную сцену.
-        photo = source.convert("RGB")
-        mask = studio_foreground_mask(photo)
-        bounds = mask.point(lambda value: 255 if value > 120 else 0).getbbox()
-        if bounds:
-            padding = int(max(photo.size) * 0.12)
-            crop = (
-                max(0, bounds[0] - padding),
-                max(0, bounds[1] - padding),
-                min(photo.width, bounds[2] + padding),
-                min(photo.height, bounds[3] + padding),
-            )
-            photo, mask = photo.crop(crop), mask.crop(crop)
-        box = (round(width * FIT_RATIO), round(height * FIT_RATIO))
-        photo = ImageOps.contain(photo, box, method=Image.Resampling.LANCZOS)
-        mask = ImageOps.contain(mask, box, method=Image.Resampling.LANCZOS)
-        position = ((width - photo.width) // 2, (height - photo.height) // 2)
-        background.paste(photo, position, mask)
-        return background
-
-    mask, position = fit_mask(highlight_mask(source, article))
-    # Очень мягкий локальный блик помогает прозрачному стеклу читаться, не утолщая контуры.
-    glow = mask.filter(ImageFilter.GaussianBlur(radius=18)).point(lambda value: round(value * 0.06))
-    background.paste(Image.new("RGB", mask.size, GLASS_GLOW), position, glow)
-    background.paste(Image.new("RGB", mask.size, GLASS_HIGHLIGHT), position, mask)
-    return background
 
 
 def main() -> int:
@@ -209,7 +148,7 @@ def main() -> int:
     if not rows or not images:
         raise SystemExit("Не удалось найти строки товаров или фото в PDF")
     if len(rows) != len(images):
-        raise SystemExit(f"Несовпадение в PDF: артикулов {len(rows)}, фото {len(images)}")
+        raise SystemExit(f"Немсовпадение в PDF: артикулов {len(rows)}, фото {len(images)}")
 
     OUT_DIR.mkdir(parents=True, exist_ok=True)
     report: dict[str, dict[str, object]] = {}
@@ -218,7 +157,7 @@ def main() -> int:
         if pixmap.colorspace and pixmap.colorspace.name != "DeviceRGB":
             pixmap = pymupdf.Pixmap(pymupdf.csRGB, pixmap)
         source = Image.frombytes("RGB", (pixmap.width, pixmap.height), pixmap.samples)
-        image = render_glass(article, source)
+        image = render_product(source)
 
         target = OUT_DIR / f"{article}.jpg"
         image.save(target, "JPEG", quality=94, optimize=True, subsampling=0)
@@ -227,13 +166,13 @@ def main() -> int:
             "sourceSize": [source_width, source_height],
             "size": list(OUTPUT_SIZE),
             "file": target.name,
-            "processing": "PDF photo; dark-background contrast pass; geometry unchanged",
+            "processing": "original PDF photo, studio background kept; 4:5 frame padded with mirrored photo edges",
         }
 
     (OUT_DIR / "photos.json").write_text(
         json.dumps(report, ensure_ascii=False, indent=1) + "\n", encoding="utf-8"
     )
-    print(f"[photos] извлечено {len(report)} форм из {pdf.name} → {OUT_DIR.relative_to(ROOT)}")
+    print(f"[photos] извлечено {len(report)} кадров из {pdf.name} → {OUT_DIR.relative_to(ROOT)}")
     return 0
 
 
