@@ -5,7 +5,7 @@ import { navigate } from '../router.js';
 import { tg } from '../tg.js';
 import { locale } from '../i18n.js';
 import { state, product, addToCart, inCart, isFavorite, toggleFavorite, categoryProducts } from '../state.js';
-import { productCard, qtyStepper } from '../components.js';
+import { productCard, qtyStepper, specChips } from '../components.js';
 
 function featureDescription() {
   return locale.current === 'en'
@@ -105,6 +105,7 @@ export default function productView({ id }) {
       h('.pd-collection', productLabel),
       priceRow),
     h('.pd-desc', description),
+    specChips(p),
     qtyBox,
     h('div.pd-action-wrap', actionBtn),
     h('.section-footer', { style: { padding: '8px 20px 0' } }, p.lead || ''),
@@ -126,7 +127,6 @@ export default function productView({ id }) {
     content,
     navLogo: false,
     navLanguage: false,
-    navBack: false,
     onDestroy: () => tg.hideMainButton(),
     navRight: null,
     onReturn: () => tg.hideMainButton(),

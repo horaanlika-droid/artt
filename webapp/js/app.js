@@ -1,4 +1,5 @@
 /** Точка входа витрины: Mini App в Telegram или обычный сайт в браузере. */
+import './platform.js';
 import { tg } from './tg.js';
 import { h, t } from './ui.js';
 import { bootstrap, state } from './state.js';

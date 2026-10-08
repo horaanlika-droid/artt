@@ -2,8 +2,9 @@ import { h, tap, sheet, money, emptyState, t, positionsLabel } from '../ui.js';
 import { icon } from '../icons.js';
 import { navigate } from '../router.js';
 import { locale } from '../i18n.js';
+import { platform } from '../platform.js';
 import { state, searchProducts, categoryProducts } from '../state.js';
-import { productRow } from '../components.js';
+import { productRow, detailCard } from '../components.js';
 
 const SORTS = ['popular', 'cheap', 'expensive', 'volume', 'name'];
 const filters = { sort: 'popular', onlyNew: false, onlyAvailable: false, maxPrice: 0 };
@@ -44,6 +45,7 @@ export default function catalogView(params = {}) {
       return;
     }
 
+    const wide = platform.form !== 'phone';
     let count = 0;
     for (const c of state.categories) {
       let list = allList.filter(p => p.category === c.id);
@@ -51,10 +53,11 @@ export default function catalogView(params = {}) {
         list = sortProducts(list);
         count += list.length;
         container.append(
-          h('div', { style: { marginTop: '28px' } },
+          h('div', { class: wide ? 'wide-cat' : '', style: { marginTop: '28px' } },
             h('.row-head', h('h2', c.title)),
-            productRow(list, { fixedWidth: true })
-          )
+            wide
+              ? h('.dgrid', ...list.map((p) => detailCard(p)))
+              : productRow(list, { fixedWidth: true })),
         );
       }
     }

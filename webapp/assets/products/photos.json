@@ -205,7 +205,7 @@
    1152
   ],
   "file": "AG0004.jpg",
-  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+  "processing": "AI-regenerated from PDF spec in reference style (dark navy scene, glowing crystal); background normalized to #141d29"
  },
  "AG0020": {
   "source": "COCKTAIL EMBASSY - прайс.pdf",
@@ -322,6 +322,6 @@
    1152
   ],
   "file": "AG0019.jpg",
-  "processing": "PDF photo; dark-background contrast pass; geometry unchanged"
+  "processing": "AI-regenerated from PDF spec in reference style (dark navy scene, glowing crystal); background normalized to #141d29"
  }
 }
