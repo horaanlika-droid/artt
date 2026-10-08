@@ -1,5 +1,5 @@
 /** Главная: мобильная продуктовая обложка и широкая обложка коллекции. */
-import { h, tap, section, t, money, toast } from '../ui.js';
+import { h, tap, section, t, money, toast, glint } from '../ui.js';
 import { icon } from '../icons.js';
 import { navigate } from '../router.js';
 import { state, categoryProducts, addToCart } from '../state.js';
@@ -28,34 +28,39 @@ function mobileDescription() {
     : 'Изящный вытянутый бокал-пони для лаконичной сервировки. Классические пропорции и тонкая ножка создают ощущение лёгкости.';
 }
 
-function addFeatured(product) {
+function addFeatured(product, visual) {
   if (!product || product.price === null || product.outOfStock) {
     navigate('product', { id: product?.id || 'AG0020' });
     return;
   }
   addToCart(product.id);
+  glint(visual);
   tg.haptic('success');
   toast(`${product.name} — ${locale.current === 'en' ? 'added to cart' : 'добавлен в корзину'}`);
 }
 
 function mobileHero(product) {
   const cta = locale.current === 'en' ? 'ADD TO CART' : 'В КОРЗИНУ';
-  const image = product?.image || 'assets/products/AG0020.jpg';
+  const image = product?.image || '/assets/products/AG0020.jpg';
+  const picture = h('img.mobile-hero-image', {
+    src: image,
+    alt: displayName(product),
+    loading: 'eager',
+    decoding: 'async',
+    fetchPriority: 'high',
+  });
+  picture.addEventListener('error', () => picture.replaceWith(
+    h('.mobile-hero-image-fallback', { html: icon('coupe', 104) }),
+  ), { once: true });
 
+  const stage = h('.mobile-hero-stage', h('div.mobile-hero-glow'), picture);
   return h('section.mobile-home-hero',
-    h('.mobile-hero-stage',
-      h('div.mobile-hero-glow'),
-      h('img.mobile-hero-image', {
-        src: image,
-        alt: displayName(product),
-        loading: 'eager',
-        decoding: 'async',
-      })),
+    stage,
     h('.mobile-hero-copy',
       h('h1.mobile-hero-title', displayName(product)),
       h('.mobile-hero-kicker', locale.current === 'en' ? 'Hand-Blown Crystal' : 'Хрусталь ручной выдувки'),
       h('p.mobile-hero-description', mobileDescription()),
-      tap(h('button.mobile-hero-cta', cta), () => addFeatured(product), 'light')),
+      tap(h('button.mobile-hero-cta', cta), () => addFeatured(product, stage), 'light')),
   );
 }
 
@@ -88,18 +93,27 @@ function desktopHero(products) {
   const addButton = tap(h('button.desktop-hero-cta',
     h('span', locale.current === 'en' ? 'Add to Cart' : 'Добавить в корзину'),
     h('span.desktop-cta-arrow', { html: icon('arrowRight', 18) })), () => {
-    addFeatured(collectionItems[selected] || collectionItems[0]);
+    addFeatured(collectionItems[selected] || collectionItems[0], art);
   }, 'light');
 
-  const art = h('.desktop-hero-art',
-    ...collectionItems.slice(0, 3).map((product, index) => h('img.desktop-glass', {
+  const glassImages = collectionItems.slice(0, 3).map((product, index) => {
+    const image = h('img.desktop-glass', {
       class: `desktop-glass-${index + 1}`,
       src: product.image,
       alt: product.name,
-      loading: index === 0 ? 'eager' : 'lazy',
+      loading: 'eager',
       decoding: 'async',
-    })),
-  );
+      fetchPriority: index === 0 ? 'high' : 'auto',
+    });
+    image.addEventListener('error', () => image.replaceWith(
+      h('.desktop-glass-fallback', {
+        class: `desktop-glass-${index + 1}`,
+        html: icon('coupe', 118),
+      }),
+    ), { once: true });
+    return image;
+  });
+  const art = h('.desktop-hero-art', ...glassImages);
 
   return h('section.desktop-home-hero',
     h('h1.desktop-hero-title', 'Levitating'),
@@ -120,6 +134,9 @@ export default function homeView() {
   const stemmed = categoryProducts('levitating').concat(categoryProducts('coupethini')).slice(0, 10);
   const product = featuredProduct();
   const collectionItems = categoryProducts('levitating').filter((p) => p.image).slice(0, 3);
+  const quickProducts = collectionItems.length
+    ? collectionItems
+    : state.products.filter((p) => p.image).slice(0, 3);
   const brand = state.config?.brand || {};
 
   const searchBar = tap(h('.searchbar.searchbar-home',
@@ -130,6 +147,12 @@ export default function homeView() {
   const content = h('div',
     mobileHero(product),
     desktopHero(collectionItems),
+    quickProducts.length ? h('.home-quick-products',
+      h('.row-head',
+        h('h2', locale.current === 'en' ? 'Levitating collection' : 'Коллекция Levitating'),
+        tap(h('a', `${locale.current === 'en' ? 'All pieces' : 'Все позиции'} `, h('span', { html: icon('chevron', 13) })),
+          () => navigate('catalog', { category: 'levitating' }))),
+      productRow(quickProducts)) : null,
     h('.home-top', searchBar),
     h('.features',
       ...[1, 2, 3, 4].map((n) => h('.feature',
@@ -178,7 +201,7 @@ export default function homeView() {
   );
 
   return {
-    title: 'Cocktail Embassy',
+    title: 'The Pony Glass Shop',
     content,
     classes: ['home-screen'],
     tab: 'home',

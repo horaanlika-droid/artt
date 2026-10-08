@@ -167,9 +167,10 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
-  filter: contrast(1.2);
-  opacity: 0;
-  transition: opacity 0.4s ease;
+  mix-blend-mode: lighten;
+  filter: contrast(1.32) brightness(1.28);
+  opacity: 1;
+  transition: opacity 0.2s ease;
 }
 .pcard-media img.loaded { opacity: 1; }
 .pcard-noimg { font-size: 34px; color: var(--label-4); position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; }
@@ -536,7 +537,7 @@
   object-fit: contain;
   object-position: center;
   mix-blend-mode: lighten;
-  filter: contrast(1.2) brightness(1.12);
+  filter: contrast(1.28) brightness(1.26);
 }
 .mobile-hero-copy {
   flex: none;
@@ -583,6 +584,33 @@
   transition: transform 0.14s ease, opacity 0.14s ease;
 }
 .mobile-hero-cta:active { transform: scale(0.985); opacity: 0.9; }
+.home-quick-products { margin-top: 8px; }
+.home-quick-products .row-head { padding: 0 18px 6px; }
+.home-quick-products .row-head h2 { font-size: 19px; }
+.home-quick-products .hscroll {
+  gap: 10px;
+  margin: 0;
+  padding: 6px 18px 16px;
+}
+.home-quick-products .hscroll .pcard { width: clamp(122px, 34vw, 150px); }
+.mobile-hero-image-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  color: rgba(225, 236, 250, 0.75);
+  background: radial-gradient(ellipse, rgba(112, 133, 160, 0.24), transparent 70%);
+}
+.desktop-glass-fallback {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(225, 236, 250, 0.78);
+  pointer-events: none;
+}
 
 .desktop-home-hero { display: none; }
 .desktop-nav { display: none; }
@@ -600,7 +628,7 @@
   aspect-ratio: auto;
   object-fit: contain;
   mix-blend-mode: lighten;
-  filter: contrast(1.2) brightness(1.12);
+  filter: contrast(1.28) brightness(1.26);
 }
 .product-detail-screen .pd-flags,
 .product-detail-screen .pd-gallery .fav-btn,
@@ -640,7 +668,7 @@
   letter-spacing: 0.015em;
 }
 
-@media (min-width: 860px) {
+@media (min-width: 768px) {
   html, body {
     width: 100%;
     height: 100%;
@@ -788,7 +816,7 @@
     object-position: center bottom;
     opacity: 0.96;
     mix-blend-mode: lighten;
-    filter: contrast(1.12) brightness(1.12);
+    filter: contrast(1.28) brightness(1.24);
     pointer-events: none;
   }
   .desktop-glass-1 { left: 0; width: 40%; height: 100%; }
@@ -902,7 +930,7 @@
   .product-detail-screen > div > .section { display: none; }
 }
 
-@media (min-width: 860px) and (max-height: 720px) {
+@media (min-width: 1200px) and (max-height: 720px) {
   .app { height: calc(100svh - 42px); }
   .desktop-home-hero { height: calc(100svh - 158px); min-height: 430px; }
   .desktop-hero-copy { top: 47%; }
@@ -910,4 +938,149 @@
   .desktop-collection-description { margin-top: 10px; }
   .desktop-hero-dots { margin-top: 16px; }
   .desktop-hero-cta { margin-top: 20px; }
+}
+
+/* Планшет: отдельный масштаб и рамка, между полноэкранным iPhone и desktop. */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .app {
+    width: min(94vw, 1080px);
+    height: min(93svh, 1120px);
+    min-width: 0;
+    min-height: 600px;
+    border-radius: 26px;
+  }
+  .navbar { height: 76px; padding: 0 4.5%; }
+  .desktop-brand { font-size: clamp(19px, 2.25vw, 24px); }
+  .desktop-nav-links { gap: clamp(16px, 2.4vw, 30px); }
+  .desktop-link { font-size: clamp(13px, 1.5vw, 15px); }
+  .screen { padding-top: 76px; padding-bottom: 28px; }
+  .desktop-home-hero {
+    height: min(calc(93svh - 104px), 1124px);
+    min-height: 500px;
+  }
+  .desktop-hero-title {
+    top: 7%;
+    left: 4.5%;
+    font-size: clamp(66px, 11vw, 132px);
+  }
+  .desktop-hero-art {
+    top: 23%;
+    left: 3.5%;
+    width: 70%;
+    height: 67%;
+  }
+  .desktop-glass-1 { width: 40%; }
+  .desktop-glass-2 { left: 23%; width: 39%; height: 74%; }
+  .desktop-glass-3 { left: 47%; width: 43%; height: 97%; }
+  .desktop-hero-copy {
+    top: 52%;
+    right: 4.2%;
+    width: min(27%, 250px);
+  }
+  .desktop-collection-name { font-size: clamp(21px, 2.8vw, 29px); }
+  .desktop-collection-label { font-size: 14px; }
+  .desktop-collection-price { margin-top: 16px; font-size: clamp(22px, 2.9vw, 28px); }
+  .desktop-collection-description { margin-top: 12px; font-size: 14px; }
+  .desktop-hero-dots { margin-top: 18px; }
+  .desktop-hero-cta { min-height: 50px; margin-top: 22px; }
+  .product-detail-screen > div {
+    grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+    gap: 20px 34px;
+    padding: 10px 4%;
+  }
+  .product-detail-screen .pd-gallery { height: min(68svh, 720px); min-height: 420px; }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) and (max-height: 700px) {
+  .app { height: calc(100svh - 36px); min-height: 0; }
+  .desktop-home-hero { height: calc(100svh - 140px); min-height: 420px; }
+  .desktop-hero-copy { top: 46%; }
+  .desktop-collection-price { margin-top: 12px; }
+  .desktop-collection-description { margin-top: 8px; }
+  .desktop-hero-dots { margin-top: 12px; }
+  .desktop-hero-cta { min-height: 46px; margin-top: 16px; }
+}
+
+/* iPad Pro в альбомной ориентации: сохраняем tablet-рамку даже при ширине desktop. */
+@media (min-width: 1200px) and (hover: none) and (pointer: coarse) {
+  .app {
+    width: min(94vw, 1500px);
+    height: min(92svh, 1280px);
+    min-width: 0;
+    min-height: 620px;
+    border-radius: 30px;
+  }
+  .navbar { height: 84px; padding: 0 5%; }
+  .screen { padding-top: 84px; padding-bottom: 30px; }
+  .desktop-home-hero { height: min(calc(92svh - 116px), 1196px); min-height: 580px; }
+  .desktop-hero-title { font-size: clamp(88px, 12vw, 160px); }
+  .desktop-hero-art { top: 21%; width: 72%; height: 68%; }
+  .desktop-hero-copy { top: 50%; right: 5%; width: min(25%, 300px); }
+}
+
+/* Узкий экран в альбомной ориентации остаётся iPhone-витриной. */
+@media (min-width: 768px) and (max-height: 520px) and (hover: none) and (pointer: coarse) {
+  html, body { width: 100%; height: 100%; overflow: hidden; }
+  body { display: block; background: var(--bg); }
+  .app {
+    position: fixed;
+    inset: 0;
+    width: auto;
+    height: auto;
+    min-width: 0;
+    min-height: 0;
+    max-height: none;
+    margin: 0;
+    border: 0;
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .navbar {
+    position: fixed;
+    height: calc(var(--safe-top) + var(--nav-h));
+    padding: var(--safe-top) 12px 0;
+    border-bottom-color: var(--hairline);
+  }
+  .navbar .nav-side { display: flex; }
+  .navbar .nav-title { display: block; }
+  .desktop-nav { display: none; }
+  .screen {
+    padding-top: calc(var(--safe-top) + var(--nav-h));
+    padding-bottom: calc(var(--safe-bottom) + var(--tab-h) + 28px);
+  }
+  .tabbar { display: flex; }
+  .mobile-home-hero { display: flex; }
+  .desktop-home-hero { display: none; }
+}
+
+/* Add-to-cart: sweep of reflected light across the glass photo. */
+.glass-glint { isolation: isolate; }
+.glass-glint::after {
+  content: '';
+  position: absolute;
+  z-index: 20;
+  top: -22%;
+  bottom: -22%;
+  left: -55%;
+  width: 42%;
+  pointer-events: none;
+  opacity: 0;
+  background: linear-gradient(105deg,
+    transparent 0%,
+    rgba(192, 222, 255, 0.06) 34%,
+    rgba(255, 255, 255, 0.78) 50%,
+    rgba(194, 220, 255, 0.2) 61%,
+    transparent 100%);
+  mix-blend-mode: screen;
+  transform: skewX(-16deg);
+  animation: glass-glint-sweep 900ms cubic-bezier(0.2, 0.7, 0.3, 1) both;
+}
+@keyframes glass-glint-sweep {
+  0% { opacity: 0; transform: translateX(0) skewX(-16deg); }
+  20% { opacity: 0.8; }
+  62% { opacity: 0.86; }
+  100% { opacity: 0; transform: translateX(390%) skewX(-16deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .glass-glint::after { animation-duration: 1ms; }
 }

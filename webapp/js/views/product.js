@@ -1,5 +1,5 @@
 /** Карточка товара: акцентная мобильная карточка и подробности каталога ниже. */
-import { h, tap, section, money, usdHint, t, toast } from '../ui.js';
+import { h, tap, section, money, usdHint, t, toast, glint } from '../ui.js';
 import { icon } from '../icons.js';
 import { navigate } from '../router.js';
 import { tg } from '../tg.js';
@@ -34,14 +34,19 @@ export default function productView({ id }) {
     ? (locale.current === 'en' ? 'Hand-Blown Crystal' : 'Хрусталь ручной выдувки')
     : (collection?.title || '');
   const description = isFeatureProduct ? featureDescription() : p.description;
+  const photo = p.image
+    ? h('img', { src: p.image, alt: productTitle, loading: 'eager', decoding: 'async', fetchPriority: 'high' })
+    : h('.pcard-noimg', { html: icon('coupe', 60) });
+  if (photo instanceof HTMLImageElement) {
+    photo.addEventListener('error', () => photo.replaceWith(h('.pcard-noimg', { html: icon('coupe', 60) })), { once: true });
+  }
 
   const gallery = h('.pd-gallery',
     h('.pd-flags',
       p.isNew ? h('.badge.new', t('product.new')) : null,
       p.isHit ? h('.badge', t('product.hit')) : null,
       p.engraving ? h('.badge', t('product.engraving')) : null),
-    p.image ? h('img', { src: p.image, alt: productTitle, loading: 'eager', decoding: 'async' })
-      : h('.pcard-noimg', { html: icon('coupe', 60) }),
+    photo,
     h('button.fav-btn', {
       style: { position: 'absolute', top: '12px', right: '12px' },
       class: isFavorite(p.id) ? 'on' : '',
@@ -88,6 +93,7 @@ export default function productView({ id }) {
       return;
     }
     addToCart(p.id);
+    glint(gallery);
     tg.haptic('success');
     toast(`${p.name} — ${t('product.inCart')}`);
   });

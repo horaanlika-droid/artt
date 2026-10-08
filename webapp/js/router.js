@@ -227,4 +227,5 @@ export function updateTabBadges() {
 
 subscribe((event) => {
   if (event === 'cart') updateTabBadges();
+  if (event === 'remote-ready') refresh().catch((err) => console.warn('[router] refresh skipped:', err));
 });

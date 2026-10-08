@@ -31,6 +31,7 @@ export default function catalogView(params = {}) {
 
   function apply() {
     let allList = query ? searchProducts(query) : state.products;
+    if (params.category) allList = allList.filter((p) => p.category === params.category);
     if (filters.onlyNew) allList = allList.filter((p) => p.isNew);
     if (filters.onlyAvailable) allList = allList.filter((p) => !p.outOfStock);
     if (filters.maxPrice) allList = allList.filter((p) => (p.price ?? maxPrice) <= filters.maxPrice);
