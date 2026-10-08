@@ -18,8 +18,8 @@ export const tg = {
       wa.ready();
       wa.expand();
       if (typeof wa.disableVerticalSwipes === 'function') wa.disableVerticalSwipes();
-      if (typeof wa.setHeaderColor === 'function') wa.setHeaderColor('#f2ede3');
-      if (typeof wa.setBackgroundColor === 'function') wa.setBackgroundColor('#f2ede3');
+      if (typeof wa.setHeaderColor === 'function') wa.setHeaderColor('#141d29');
+      if (typeof wa.setBackgroundColor === 'function') wa.setBackgroundColor('#141d29');
       if (typeof wa.requestFullscreen === 'function' && wa.isVersionAtLeast?.('8.0')) {
         if (['ios', 'android'].includes(wa.platform)) {
           try { wa.requestFullscreen(); } catch {}
@@ -71,7 +71,7 @@ export const tg = {
     if (!b) return;
     if (this._mainHandler) b.offClick(this._mainHandler);
     if (!visible) { b.hide(); return; }
-    b.setParams({ text, color: '#d3ad63', text_color: '#241a06', is_active: active, is_visible: true });
+    b.setParams({ text, color: '#ffffff', text_color: '#141d29', is_active: active, is_visible: true });
     if (progress) b.showProgress(false); else b.hideProgress();
     if (onClick) {
       this._mainHandler = onClick;

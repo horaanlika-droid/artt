@@ -1,6 +1,6 @@
 {
  "AG0001": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -8,7 +8,7 @@
   "file": "AG0001.jpg"
  },
  "AG0002": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -16,7 +16,7 @@
   "file": "AG0002.jpg"
  },
  "AG0003": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -24,7 +24,7 @@
   "file": "AG0003.jpg"
  },
  "AG0004": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -32,7 +32,7 @@
   "file": "AG0004.jpg"
  },
  "AG0006": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -40,7 +40,7 @@
   "file": "AG0006.jpg"
  },
  "AG0008": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -48,7 +48,7 @@
   "file": "AG0008.jpg"
  },
  "AG0009": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -56,7 +56,7 @@
   "file": "AG0009.jpg"
  },
  "AG0010": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -136,7 +136,7 @@
   "file": "AG0019.jpg"
  },
  "AG0020": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
@@ -176,7 +176,7 @@
   "file": "AG0024.jpg"
  },
  "AG0025": {
-  "source": "ai-studio-render-style-v2",
+  "source": "ai-studio-render-style-v3-flat-bg",
   "size": [
    928,
    1152
