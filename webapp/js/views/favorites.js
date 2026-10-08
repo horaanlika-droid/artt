@@ -28,7 +28,7 @@ export default function favoritesView() {
     title: t('favorites.title'),
     tab: 'favorites',
     content: h('div', { style: { paddingTop: '14px' } },
-      h('.tiny.muted', { style: { padding: '0 20px 10px' } }, positionsLabel(items.length)),
+      h('.tiny.muted-ink', { style: { padding: '0 20px 10px' } }, positionsLabel(items.length)),
       h('.product-grid', ...items.map((p) => productCard(p)))),
   };
 }

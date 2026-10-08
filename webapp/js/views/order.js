@@ -84,8 +84,8 @@ export default function orderView({ id, justCreated, awaitingPayment }) {
       awaitingPayment ? h('.notice', t('order.awaitingNotice')) : null,
 
       h('div', { style: { padding: '18px 16px 0' } },
-        h('.hstack', h('h1', { style: { margin: 0, fontSize: '26px', letterSpacing: '-0.6px' } }, order.number), h('.spacer'), statusChip(order)),
-        h('.tiny.muted', { style: { marginTop: '4px' } },
+        h('.hstack', h('h1', { style: { margin: 0, fontSize: '26px', letterSpacing: '-0.6px', color: 'var(--ink)' } }, order.number), h('.spacer'), statusChip(order)),
+        h('.tiny.muted-ink', { style: { marginTop: '4px' } },
           t('order.createdAt', { date: dateShort(order.createdAt), time: timeShort(order.createdAt) }))),
 
       section(t('order.status'), h('.group', h('.cell', { style: { display: 'block', padding: '14px' } }, timeline))),

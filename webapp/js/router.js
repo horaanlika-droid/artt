@@ -67,7 +67,7 @@ function applyChrome(entry) {
   else if (canGoBack) {
     left.append(tap(h('button.nav-btn', { html: `${icon('chevronLeft', 22)}<span>${t('common.back')}</span>` }), () => back(), 'light'));
   } else if (entry.navLogo !== false) {
-    left.append(h('img.nav-logo', { src: 'assets/brand/logo.svg', alt: 'Cocktail Embassy' }));
+    left.append(h('img.nav-logo', { src: 'assets/brand/logo-dark.svg', alt: 'Cocktail Embassy' }));
   }
 
   const title = h('.nav-title', entry.title || '');

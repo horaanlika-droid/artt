@@ -18,8 +18,8 @@ export const tg = {
       wa.ready();
       wa.expand();
       if (typeof wa.disableVerticalSwipes === 'function') wa.disableVerticalSwipes();
-      if (typeof wa.setHeaderColor === 'function') wa.setHeaderColor('#0b0b0d');
-      if (typeof wa.setBackgroundColor === 'function') wa.setBackgroundColor('#0b0b0d');
+      if (typeof wa.setHeaderColor === 'function') wa.setHeaderColor('#f2ede3');
+      if (typeof wa.setBackgroundColor === 'function') wa.setBackgroundColor('#f2ede3');
       if (typeof wa.requestFullscreen === 'function' && wa.isVersionAtLeast?.('8.0')) {
         if (['ios', 'android'].includes(wa.platform)) {
           try { wa.requestFullscreen(); } catch {}

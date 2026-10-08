@@ -74,7 +74,7 @@ export default function homeView() {
 
   const searchBar = tap(h('.searchbar.searchbar-home',
     h('span', { html: icon('search', 17) }),
-    h('span', { style: { color: 'var(--label-3)', fontSize: '16px' } }, t('home.search'))),
+    h('span', { style: { color: 'var(--ink-3)', fontSize: '16px' } }, t('home.search'))),
   () => navigate('search'));
 
   const content = h('div',

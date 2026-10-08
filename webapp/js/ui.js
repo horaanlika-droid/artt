@@ -206,7 +206,7 @@ export function emptyState({ emoji = '✨', title, text, action }) {
 
 export function spinnerBlock(text) {
   return h('div', { style: { display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '12px', padding: '60px 0' } },
-    h('.spinner'), text ? h('.tiny.muted', text) : null);
+    h('.spinner'), text ? h('.tiny.muted-ink', text) : null);
 }
 
 export function skeletonGrid(count = 6) {

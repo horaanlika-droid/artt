@@ -1,6 +1,6 @@
 {
  "AG0001": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -8,7 +8,7 @@
   "file": "AG0001.jpg"
  },
  "AG0002": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -16,7 +16,7 @@
   "file": "AG0002.jpg"
  },
  "AG0003": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -24,7 +24,7 @@
   "file": "AG0003.jpg"
  },
  "AG0004": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -32,7 +32,7 @@
   "file": "AG0004.jpg"
  },
  "AG0006": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -40,7 +40,7 @@
   "file": "AG0006.jpg"
  },
  "AG0008": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -48,7 +48,7 @@
   "file": "AG0008.jpg"
  },
  "AG0009": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -56,7 +56,7 @@
   "file": "AG0009.jpg"
  },
  "AG0010": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -64,39 +64,39 @@
   "file": "AG0010.jpg"
  },
  "AG0011": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   194,
-   232
+   928,
+   1152
   ],
   "file": "AG0011.jpg"
  },
  "AG0012": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   222,
-   260
+   928,
+   1152
   ],
   "file": "AG0012.jpg"
  },
  "AG0013": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   222,
-   250
+   928,
+   1152
   ],
   "file": "AG0013.jpg"
  },
  "AG0014": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   168,
-   214
+   928,
+   1152
   ],
   "file": "AG0014.jpg"
  },
  "AG0015": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -104,7 +104,7 @@
   "file": "AG0015.jpg"
  },
  "AG0016": {
-  "source": "ai-studio-render",
+  "source": "ai-studio-render-style-v2",
   "size": [
    928,
    1152
@@ -112,90 +112,90 @@
   "file": "AG0016.jpg"
  },
  "AG0017": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   222,
-   264
+   928,
+   1152
   ],
   "file": "AG0017.jpg"
  },
  "AG0018": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   222,
-   238
+   928,
+   1152
   ],
   "file": "AG0018.jpg"
  },
  "AG0019": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   292,
-   292
+   928,
+   1152
   ],
   "file": "AG0019.jpg"
  },
  "AG0020": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   168,
-   254
+   928,
+   1152
   ],
   "file": "AG0020.jpg"
  },
  "AG0021": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   222,
-   334
+   928,
+   1152
   ],
   "file": "AG0021.jpg"
  },
  "AG0022": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   118,
-   270
+   928,
+   1152
   ],
   "file": "AG0022.jpg"
  },
  "AG0023": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   194,
-   186
+   928,
+   1152
   ],
   "file": "AG0023.jpg"
  },
  "AG0024": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   194,
-   178
+   928,
+   1152
   ],
   "file": "AG0024.jpg"
  },
  "AG0025": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   194,
-   210
+   928,
+   1152
   ],
   "file": "AG0025.jpg"
  },
  "AG0026": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   166,
-   220
+   928,
+   1152
   ],
   "file": "AG0026.jpg"
  },
  "AG0027": {
-  "source": "COCKTAIL EMBASSY - прайс.pdf",
+  "source": "ai-studio-render-style-v2",
   "size": [
-   292,
-   292
+   928,
+   1152
   ],
   "file": "AG0027.jpg"
  }

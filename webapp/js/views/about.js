@@ -32,7 +32,7 @@ export default function aboutView() {
     h('.pd-head',
       h('.pd-collection', `${brand.city || 'Dubai'}, ${brand.country || 'UAE'}`),
       h('h1.pd-name', { style: { fontSize: '27px' } }, brand.name || 'Cocktail Embassy'),
-      h('div', { style: { fontSize: '14px', color: 'var(--label-3)' } }, brand.tagline || '')),
+      h('div', { style: { fontSize: '14px', color: 'var(--ink-3)' } }, brand.tagline || '')),
 
     h('.pd-desc', brand.about || ''),
 
