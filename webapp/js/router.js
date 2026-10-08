@@ -2,6 +2,7 @@
 import { h, tap, t } from './ui.js';
 import { icon } from './icons.js';
 import { tg } from './tg.js';
+import { platform } from './platform.js';
 import { state, subscribe, cartCount, switchLocale } from './state.js';
 import { locale } from './i18n.js';
 
@@ -12,11 +13,10 @@ const screensEl = () => document.getElementById('screens');
 const navbarEl = () => document.getElementById('navbar');
 const tabbarEl = () => document.getElementById('tabbar');
 
-/** Таб-бар собирается на каждом рендере, поэтому подписи берём через t(). */
+/** Таб-бар: 4 вкладки с подписями, как в референсе (Home / Collection / Cart / Profile). */
 export const TABS = () => [
   { id: 'home', title: t('tab.home'), icon: 'home', route: 'home' },
-  { id: 'search', title: t('search.title'), icon: 'search', route: 'search' },
-  { id: 'catalog', title: t('tab.catalog'), icon: 'plusCircle', route: 'catalog' },
+  { id: 'catalog', title: t('tab.collection'), icon: 'coupe', route: 'catalog' },
   { id: 'cart', title: t('tab.cart'), icon: 'bag', route: 'cart' },
   { id: 'profile', title: t('tab.profile'), icon: 'person', route: 'profile' },
 ];
@@ -64,13 +64,26 @@ function desktopNavigation(entry) {
   );
   const onCatalog = entry.name === 'catalog' || entry.name === 'search';
   const onAbout = entry.name === 'about' || entry.name === 'delivery';
+  const badge = cartCount();
   return h('.desktop-nav',
     tap(h('button.desktop-brand', { type: 'button' }, 'Cocktail Embassy'),
       () => navigateTo('home', 'home'), 'select'),
     h('.desktop-nav-links',
-      link(locale.current === 'en' ? 'Shop' : 'Каталог', 'catalog', 'catalog', onCatalog),
-      link(locale.current === 'en' ? 'Collections' : 'Коллекции', 'catalog', 'catalog', false),
-      link(locale.current === 'en' ? 'About' : 'О бренде', 'about', 'profile', onAbout),
+      link(t('nav.products'), 'catalog', 'catalog', onCatalog),
+      link(t('nav.collections'), 'home', 'home', entry.name === 'home'),
+      link(t('nav.about'), 'about', 'profile', onAbout),
+      link(t('nav.contact'), 'support', 'profile', entry.name === 'support')),
+    h('.desktop-nav-actions',
+      tap(h('button.desktop-icon', { type: 'button', 'aria-label': t('search.title'), html: icon('search', 19) }),
+        () => navigate('search'), 'select'),
+      languageSwitcher(),
+      tap(h('button.desktop-pill', { type: 'button' }, t('nav.wholesale')),
+        () => navigate('support', { prefill: `${t('nav.wholesale')}: ` }), 'select'),
+      tap(h('button.desktop-icon.cart', {
+        type: 'button',
+        'aria-label': t('tab.cart'),
+        html: `${icon('bag', 19)}${badge ? `<span class="dnav-badge">${badge > 99 ? '99+' : badge}</span>` : ''}`,
+      }), () => navigateTo('cart', 'cart'), 'select'),
       tap(h('button.desktop-profile', {
         type: 'button',
         'aria-label': locale.current === 'en' ? 'Account' : 'Кабинет',
@@ -91,7 +104,8 @@ function applyChrome(entry) {
   else if (canGoBack && entry.navBack !== false) {
     left.append(tap(h('button.nav-btn', { html: `${icon('chevronLeft', 22)}<span>${t('common.back')}</span>` }), () => back(), 'light'));
   } else if (!canGoBack && entry.navLogo !== false) {
-    left.append(h('img.nav-logo', { src: 'assets/brand/logo.svg', alt: 'Cocktail Embassy' }));
+    left.append(tap(h('button.nav-brand', { type: 'button' }, 'Cocktail Embassy'),
+      () => navigate(entry.tab === 'catalog' ? 'catalog' : entry.tab || 'home', {}, { replaceStack: true, tab: entry.tab || 'home' }), 'select'));
   }
 
   const title = h('.nav-title', entry.title || '');
@@ -99,6 +113,10 @@ function applyChrome(entry) {
 
   const right = h('.nav-side.right');
   if (entry.navRight) right.append(entry.navRight);
+  if (platform.form === 'phone' && !canGoBack) {
+    right.append(tap(h('button.nav-btn.icon', { 'aria-label': t('search.title'), html: icon('search', 20) }),
+      () => navigate('search'), 'select'));
+  }
   if (entry.navLanguage !== false) right.append(languageSwitcher());
 
   nav.append(left, title, right, desktopNavigation(entry));
@@ -126,9 +144,9 @@ function renderTabbar(entry) {
   for (const tab of TABS()) {
     const badgeCount = tab.id === 'cart' ? cartCount() : 0;
     const el = h('button.tab', { class: tab.id === activeTab ? 'active' : '' },
-      h('span', { html: icon(tab.icon, 26) }),
-      h('span', tab.title),
-      badgeCount ? h('.tab-badge', badgeCount > 99 ? '99+' : String(badgeCount)) : null,
+      h('span.tab-ico', { html: icon(tab.icon, 24) },
+        badgeCount ? h('.tab-badge', badgeCount > 99 ? '99+' : String(badgeCount)) : null),
+      h('span.tab-label', tab.title),
     );
     tap(el, () => switchTab(tab), 'select');
     bar.append(el);

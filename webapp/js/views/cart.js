@@ -5,7 +5,7 @@ import { navigate, refresh } from '../router.js';
 import { tg } from '../tg.js';
 import { locale } from '../i18n.js';
 import { state, cartDetailed, cartSubtotal, shippingFor, clearCart, setQty } from '../state.js';
-import { qtyStepper } from '../components.js';
+import { qtyStepper, trustBadges } from '../components.js';
 
 export default function cartView() {
   const items = cartDetailed();
@@ -77,6 +77,7 @@ export default function cartView() {
           refresh();
         }
       })),
+    h('div', { style: { padding: '6px 16px 12px' } }, trustBadges()),
   );
 
   return {
