@@ -60,7 +60,13 @@ export function productCard(p, { fixedWidth = false } = {}) {
         h('div', priceBlock),
         p.outOfStock ? null : addBtn)),
   );
-  tap(card, () => navigate('product', { id: p.id }), 'light');
+  tap(card, () => {
+    card.classList.add('selected', 'glare-effect');
+    setTimeout(() => {
+      card.classList.remove('selected', 'glare-effect');
+      navigate('product', { id: p.id });
+    }, 450);
+  }, 'light');
   return card;
 }
 

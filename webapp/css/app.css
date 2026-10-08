@@ -128,9 +128,33 @@
   flex-direction: column;
   color: var(--label);
   overflow: hidden;
-  transition: transform 0.14s ease;
+  transition: transform 0.14s ease, z-index 0.3s;
 }
-.pcard:active { transform: scale(0.985); }
+.pcard.selected {
+  transform: scale(1.1) !important;
+  z-index: 50;
+  box-shadow: 0 16px 32px rgba(0,0,0,0.5);
+  border-radius: 12px;
+}
+.pcard::after {
+  content: '';
+  position: absolute;
+  top: 0; left: -100%; width: 50%; height: 100%;
+  background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,0.3) 50%, rgba(255,255,255,0) 100%);
+  transform: skewX(-25deg);
+  z-index: 10;
+  opacity: 0;
+  pointer-events: none;
+}
+.pcard.glare-effect::after {
+  animation: pcard-glare 0.6s ease-out forwards;
+  opacity: 1;
+}
+@keyframes pcard-glare {
+  0% { left: -100%; }
+  100% { left: 200%; }
+}
+.pcard:active:not(.selected) { transform: scale(0.985); }
 
 /* Фото 4:5 на бесшовном фоне, целиком и без карточки вокруг стекла. */
 .pcard-media {
@@ -209,8 +233,10 @@
 .hscroll {
   display: flex;
   gap: 12px;
-  padding: 4px 16px 6px;
+  padding: 16px 16px 20px;
+  margin: -12px 0 -14px;
   overflow-x: auto;
+  overflow-y: visible;
   scroll-snap-type: x mandatory;
   scrollbar-width: none;
 }

@@ -1,13 +1,11 @@
-/** Каталог: коллекции-чипсы, поиск, сортировка и фильтры. */
 import { h, tap, sheet, money, emptyState, t, positionsLabel } from '../ui.js';
 import { icon } from '../icons.js';
 import { navigate } from '../router.js';
 import { locale } from '../i18n.js';
-import { state, searchProducts } from '../state.js';
-import { productCard } from '../components.js';
+import { state, searchProducts, categoryProducts } from '../state.js';
+import { productRow } from '../components.js';
 
 const SORTS = ['popular', 'cheap', 'expensive', 'volume', 'name'];
-
 const filters = { sort: 'popular', onlyNew: false, onlyAvailable: false, maxPrice: 0 };
 
 function sortProducts(list) {
@@ -23,48 +21,44 @@ function sortProducts(list) {
 }
 
 export default function catalogView(params = {}) {
-  let activeCategory = params.category || 'all';
   let query = params.query || '';
 
-  const grid = h('.product-grid');
-  const countLabel = h('.tiny.muted-ink', { style: { padding: '10px 20px 0' } });
   const prices = state.products.map((p) => p.price).filter((v) => Number.isFinite(v));
   const maxPrice = Math.max(...prices, 0);
 
+  const container = h('div', { style: { paddingBottom: '20px' } });
+  const countLabel = h('.tiny.muted-ink', { style: { padding: '10px 20px 0' } });
+
   function apply() {
-    let list = query ? searchProducts(query) : state.products;
-    if (activeCategory !== 'all') list = list.filter((p) => p.category === activeCategory);
-    if (filters.onlyNew) list = list.filter((p) => p.isNew);
-    if (filters.onlyAvailable) list = list.filter((p) => !p.outOfStock);
-    if (filters.maxPrice) list = list.filter((p) => (p.price ?? maxPrice) <= filters.maxPrice);
-    list = sortProducts(list);
+    let allList = query ? searchProducts(query) : state.products;
+    if (filters.onlyNew) allList = allList.filter((p) => p.isNew);
+    if (filters.onlyAvailable) allList = allList.filter((p) => !p.outOfStock);
+    if (filters.maxPrice) allList = allList.filter((p) => (p.price ?? maxPrice) <= filters.maxPrice);
 
-    grid.innerHTML = '';
-    if (!list.length) {
-      grid.style.display = 'block';
-      grid.append(emptyState({ emoji: '🔍', title: t('catalog.nothing'), text: t('catalog.nothingHint') }));
-    } else {
-      grid.style.display = '';
-      for (const p of list) grid.append(productCard(p));
+    container.innerHTML = '';
+    
+    if (!allList.length) {
+      container.append(emptyState({ emoji: '🔍', title: t('catalog.nothing'), text: t('catalog.nothingHint') }));
+      countLabel.textContent = positionsLabel(0);
+      return;
     }
-    countLabel.textContent = positionsLabel(list.length);
-  }
 
-  const chips = h('.chips');
-  const chipEls = new Map();
-  const makeChip = (id, title) => {
-    const el = h('button.pill', { class: activeCategory === id ? 'active' : '' }, title);
-    tap(el, () => {
-      activeCategory = id;
-      for (const [key, node] of chipEls) node.classList.toggle('active', key === id);
-      apply();
-      document.querySelector('.screen')?.scrollTo({ top: 0, behavior: 'smooth' });
-    }, 'select');
-    chipEls.set(id, el);
-    return el;
-  };
-  chips.append(makeChip('all', t('common.all')));
-  for (const c of state.categories) chips.append(makeChip(c.id, c.title));
+    let count = 0;
+    for (const c of state.categories) {
+      let list = allList.filter(p => p.category === c.id);
+      if (list.length > 0) {
+        list = sortProducts(list);
+        count += list.length;
+        container.append(
+          h('div', { style: { marginTop: '28px' } },
+            h('.row-head', h('h2', c.title)),
+            productRow(list, { fixedWidth: true })
+          )
+        );
+      }
+    }
+    countLabel.textContent = positionsLabel(count);
+  }
 
   const searchInput = h('input', { placeholder: t('catalog.searchPlaceholder'), value: query, type: 'search' });
   searchInput.addEventListener('input', () => {
@@ -145,10 +139,8 @@ export default function catalogView(params = {}) {
         h('span', { html: icon('search', 17) }),
         searchInput,
         tap(h('span', { html: icon('sliders', 19), style: { color: 'var(--accent)' } }), openFilters, 'select'))),
-    chips,
     countLabel,
-    grid,
-    h('div', { style: { height: '20px' } }),
+    container
   );
 
   return {
